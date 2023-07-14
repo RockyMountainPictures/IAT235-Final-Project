@@ -1,0 +1,188 @@
+
+/* --- Default Styling --- */
+
+body {
+	font-family: Agdasima, Arial, sans-serif;
+	background-color: #eeeeee;
+}
+
+header {
+	padding-left: 2rem;
+}
+
+h1 {
+	font-size: 3rem;
+	margin-top: 1rem;
+	margin-right: 1rem;
+	margin-bottom: 1.5rem;
+	line-height: 1;
+}
+
+h2 {
+	font-size: 2rem;
+	margin-top: 1.5rem;
+	margin-bottom: 0;
+	font-weight: bold;
+	color: black;
+}
+
+a {
+	font-size: 1.5rem;
+	text-decoration-color: red;
+	color: darkolivegreen;
+	margin-bottom: 0;
+	border-radius: 0.25rem;
+	-webkit-transition: text-decoration-color 0.25s; /* For Safari 3.0 to 6.0 */
+    transition: text-decoration-color .25s; /* For modern browsers */
+    transition-timing-function: ease-out;
+}
+
+a:hover	{
+	text-decoration-color: blue;
+}
+
+figure {
+	margin:0;
+}
+
+figcaption {
+	font-style: italic;
+}
+
+/*Commas = &&*/
+p, ul, ol {
+	font-size: 1rem;
+	width: clamp(45ch, 75%, 75ch);
+	margin-top: 0;
+}
+
+img{
+	height: auto;
+	max-width: 100%;
+	padding-right: 2rem;
+	display: inline-block;
+	max-inline-size: 50vw;
+}
+
+
+[id] {
+	scroll-margin-top: 20vw;	
+}
+
+main {
+	width: clamp(16rem, 90vw, 75rem);
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+main section {
+	background-color: white;
+	padding-bottom: 2rem;
+	padding-top: 0.5rem;
+	margin-bottom: 2rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+
+main section .body-content {
+	display: flex;
+	padding-top: 1rem;
+}
+
+main section .body-content ol, ul {
+	margin-left: 0;
+	padding-left: 1rem;
+	margin-top: 0;
+}
+
+main section .secondary-body-content {
+	padding-left: 1rem;
+	padding-right:2rem;
+}
+
+/* --- Header & Nav Styles --- */
+
+header {
+	background-color: #bbc3fa;
+	display: flex;
+	align-items: center;
+	height: auto;
+}
+
+.logo {
+	max-width: 50px;
+}
+
+nav a {
+	display: inline-block;
+	color: white;
+	background-color: #7048e0;
+	text-decoration: none;
+	padding:0.25em 0.45em;
+	margin: 0.25rem 0.5rem;
+	/* top & bottom, left & right */
+	-webkit-transition: background-color 0.25s; /* For Safari 3.0 to 6.0 */
+    transition: background-color .25s; /* For modern browsers */
+}
+
+nav a:hover {
+	background-color: #442599;
+}
+
+.cta-main {
+	display: inline-block;
+	padding: .5rem;
+	background: linear-gradient(60deg, #3b4dd4, #1d2ca1);
+	text-decoration: none;
+}
+
+.cta-main:hover {
+	background: linear-gradient(180deg, #3b4dd4, #1d2ca1);
+}
+
+.hero-text h2 {
+	color: white;
+	margin: 0;
+}
+
+.hero-text {
+	color: white;
+	background-color: rgba(30, 30, 30, 0.5);
+	width: 60%;
+	max-width: 40rem;
+	min-width: 6rem;
+	margin-left: 2rem;
+	padding: 2rem;
+	position: absolute;
+	bottom: 2rem;
+}
+
+section.hero {
+	margin-bottom: 1rem;
+	background-image: url("../img/jealous-cat.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	max-height: 645px;
+	height: 645px;
+	position: relative;
+}
+
+@media only screen and (max-width: 1000px) {
+	main section .body-content {
+		display: inline-block;
+	}
+
+	main section .secondary-body-content {
+		padding: 1rem 0;
+	}
+
+}
+
+section.hero-puppies {
+	margin-bottom: 1rem;
+	background-image: url("../img/puppy.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	max-height: 645px;
+	height:645px;
+}
