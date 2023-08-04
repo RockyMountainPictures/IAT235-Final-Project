@@ -1,0 +1,232 @@
+  @media screen and (max-width:700px) {
+
+    body {
+      justify-content: left;
+    }
+
+    .header-logo {
+      display: none;
+    }
+
+    /* nav a {
+      display: none;
+    } */
+
+    .hamburger {
+      float: left;
+      display: block;
+    }
+
+    .hero-image img {
+      justify-content: left;
+      max-width: 137px;
+      margin-left: 7.88rem;
+    }
+
+    .hero-content h1 {
+      font-size: 40px;
+      margin-top: 21.56px;
+      padding-bottom: 1.5rem;
+    }
+
+    .hero-content p {
+      padding-left: 60px;
+      font-size: 14px;
+    }
+
+    .hero-buttons {
+      justify-content: left;
+      display: grid;
+      gap: 1.2rem;
+      width: 27.1875rem;
+      margin: 2rem;
+
+    }
+
+    .map-button {
+      width: 19.1875rem;
+      height: 3.25rem;
+      gap: 1.16475rem;
+      text-decoration: none;
+      padding: 0.85825rem 3.249rem;
+    }
+
+    .effigy-button {
+      box-sizing: border-box;
+      border-style: solid;
+      border-width: 0.25rem;
+      border-radius: 1.25rem;
+      width: 25.75rem;
+      height: 4.1625rem;
+    }
+
+    #about-us h6 {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    #about-us h3 {
+      font-size: 24px;
+      /* color: var(--color-navy-blue);*/
+
+    }
+
+    .offset-title-1 {
+      color: var(--color-white);
+      transform: translate(-2rem,4rem);
+      z-index: 1;
+
+    }
+
+
+    #about-us h4 {
+      font-size: 1.5rem;
+      margin-left: clamp(10px, 20vw, 350px);
+    }
+
+    /* #about-us {
+  scroll-margin-top: 4vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.about-section-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 2.5rem;
+} 
+ */   
+    .about-overview {
+      align-items: left;
+      margin-left: 1.25rem;
+      padding: max(3.75rem, 2.5vw) clamp(2.5rem, 5rem, 3.75vw);
+      margin-bottom: -15rem;
+      border-radius: 1.25rem;
+      width: clamp(45ch, 35rem, 60vw);
+      z-index: 0;
+
+    }
+
+    .about-details {
+      margin-left: 4.2rem;
+      margin-right: 1.5rem;
+      margin-top: 0.5rem;
+      padding-bottom: max(2.5rem, 1.75vw);
+      padding-top: max(16.5rem, -3.25vw);
+      padding-left: max(1.2rem, 4vw);
+      padding-right: clamp(16rem, 11.25rem, 10vw - 4rem);
+      z-index: -1;
+    }
+
+    .info1 {
+      margin-bottom: 2rem;
+      width: 12rem;
+
+    }
+
+    .about-section-2 {
+      display: grid;
+    }
+
+    .about-section-2 img {
+      margin-left: 0.25rem;
+      margin-right: 1.25rem;
+      width: 100%;
+      height: auto;
+    }
+
+    .about-vision-text h3 {
+      padding-top: 2rem;
+    }
+
+    .about-vision-text {
+      display: grid;
+      text-align: left;
+      margin-left: 1.25rem;
+      margin-right: 1.25rem;
+      font-size: 1rem;
+    }
+
+    .about-section-3-title-content-combo h3 {
+      padding-bottom: 1rem;
+    }
+
+    .offset-title h6 {
+      margin-left: clamp(10px, 10vw, 350px);
+    }
+
+    .offset-title-3{
+        color: var(--color-white);
+      margin-left: 3.5px;
+      /*margin-left: clamp(10px, 20vw, 350px);*/
+    }
+
+    .about-bonhomme h6 {
+      padding: max(2.5rem, 2.5vw) clamp(2rem, 5rem, 3.75vw);
+      font-size: 1rem;
+      color: var(--color-white);
+      background-color: var(--color-navy);
+      margin-bottom: 4rem;
+      margin-left: -7rem;
+    }
+
+    .about-bonhomme {
+      display: grid;
+      flex-wrap: wrap;
+      justify-content: left;
+      align-items: left;
+      padding-bottom: 2.5rem;
+      padding-right: 1.25rem;
+    }
+
+    .about-bonhomme img {
+      margin-right: 1.25rem;
+      margin-left: -5rem;
+      width: 100%;
+      height: auto;
+    }
+
+    .footer-bar {
+      display: block;
+     /* padding-bottom: 25rem;*/
+      position: absolute;
+      width: 100%;
+      height: auto;
+      padding-right: min(15rem,50vw);
+    }
+
+    .footerCitation {
+      margin-top: 2rem;
+      margin-right: 4rem;
+      float: left;
+      display: flex;
+      width: 100%;
+    }
+
+    .footerCitation2 {
+      margin-top: 2rem;
+      margin-right: 10rem;
+      float: left;
+      display: block;
+    }
+
+    .NaviIcons ul {
+      float: right;
+      line-height: 3;
+      padding-right: 5rem;
+    }
+
+    .NaviIcons li {
+      display: flex;
+    }
+    
+}
+
+
+    
+  
