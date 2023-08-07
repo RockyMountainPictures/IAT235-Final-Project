@@ -1,428 +1,959 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
+
+<!-- test -->
+<!-- **** HEAD SECTION **** -->
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carnaval de Québec</title>
-  <link href="style.css" rel="stylesheet" type="text/css">
-  <link href="grid.css" rel="stylesheet">
+  <title>Carnaval de Québec - Citations</title>
+  <link href="css/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- preload hover images for responsive interaction -->
+  <link rel="preload" as="image" href="img/map-icons/hover-dog-sledding-icon.png">
+  <link rel="preload" as="image" href="img/map-icons/hover-ice-canoeing-icon.png">
+  <link rel="preload" as="image" href="img/map-icons/hover-parade-icon.png">
+  <link rel="preload" as="image" href="img/map-icons/hover-canadian-food-icon.png">
+  <link rel="preload" as="image" href="img/map-icons/hover-ice-palace-icon.png">
+  <link rel="preload" as="image" href="img/map-icons/hover-concert-icon.png">
 </head>
 
-<body class="citation-body">
-  <section id="title">
-    <h3>Citation</h3>
-  </section>
+<!-- **** HEAD SECTION ENDS **** -->
 
-  <section id="fonts">
-    <h4>fonts</h4>
-    <div class="font-list">
-      <ul>
-        <li>Poppins. From <a href="https://fonts.google.com/specimen/Poppins">
-            https://fonts.google.com/specimen/Poppins
-          </a></li>
-        <li>Playfair Display. From <a href="https://fonts.google.com/specimen/Playfair+Display">
-            https://fonts.google.com/specimen/Playfair+Display
+
+
+<!-- **** BODY SECTION **** -->
+
+<body class="home-page">
+
+  <!-- ****** Mobile Header ****** -->
+  <div id="mySidenav" class="sidenav citation-mobile-header">
+    <div class="sidenav-wrapper">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav(); closeCitationNav()">
+        <img src="img/Arrow.svg" alt="arrow facing left" width="40">
+      </a>
+      <nav>
+        <a href="index.html" onclick="closeNav();closeCitationNav()">home</a>
+        <a href="#fonts" onclick="closeNav();closeCitationNav()">fonts</a>
+        <a href="#copy-writing" onclick="closeNav();closeCitationNav()">copywriting</a>
+        <a href="#references-css" onclick="closeNav();closeCitationNav()">css</a>
+        <a href="#references-html" onclick="closeNav();closeCitationNav()">html</a>
+        <a href="#references-js" onclick="closeNav();closeCitationNav()">js</a>
+        <a href="#inspiration" onclick="closeNav();closeCitationNav()">inspo</a>
+        <a href="#images-homepage" onclick="closeNav();closeCitationNav()">homepage</a>
+        <a href="#images-popup" onclick="closeNav();closeCitationNav()">popup</a>
+        <a href="#drawings-icons-mascot" onclick="closeNav();closeCitationNav()">mascots</a>
+        <a href="#drawings-map" onclick="closeNav();closeCitationNav()">map</a>
+        <a href="#ui-icons" onclick="closeNav();closeCitationNav()">ui</a>
+      </nav>
+      <a href="index.html" class="logo-link exclude-hover"><img src="img/logo.png"
+          alt="Carnaval de Quebec logo for Nav bar" width="74" height="70" class="logo"></a>
+    </div>
+  </div>
+  <!-- ****** Mobile Header ENDS ****** -->
+
+  <!-- ****** Desktop Header ****** -->
+  <header id="top-header" class="sticky">
+    <div class="header-wrapper citation-header">
+      <a href="index.html" class="header-logo logo exclude-hover"><img src="img/logo.png"
+          alt="Carnaval de Quebec logo for Nav bar" width="60" height="60">
+        <h3>Carnaval de Québec</h3>
+      </a>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav(); openCitationNav()"> <a href="#"
+          class="hamburger"><img src="img/hamburger-icon.svg" width="40" alt="hamburger icon"></a></span>
+
+      <nav>
+        <a href="index.html">home</a>
+        <a href="#fonts">fonts</a>
+        <a href="#copy-writing">copywriting</a>
+        <a href="#references-css">css</a>
+        <a href="#references-html">html</a>
+        <a href="#references-js">js</a>
+        <a href="#inspiration">inspo</a>
+        <a href="#images-homepage">homepage</a>
+        <a href="#images-popup">popup</a>
+        <a href="#drawings-icons-mascot">mascots</a>
+        <a href="#drawings-map">map</a>
+        <a href="#ui-icons">ui</a>
+      </nav>
+    </div>
+  </header>
+  <!-- ****** Desktop Header ENDS ****** -->
+
+  <!-- ****** MAIN CONTENT BEGINS ****** -->
+  <main>
+    <div class="wrapper citation-page">
+      <h1>Citations</h1>
+      <!-- Fonts -->
+      <section id="fonts">
+        <!-- Title -->
+        <h3>Fonts</h3>
+
+        <div class="citation-link-wrapper">
+          <!-- Link Template -->
+          <a class="exclude-hover" href="https://fonts.google.com/specimen/Poppins" target="_blank">
+            <p>Poppins</p>
+            <div class="citation-source">
+              <img src="https://www.gstatic.com/images/icons/material/apps/fonts/1x/catalog/v5/favicon.svg"
+                alt="source's website logo" width="32" height="32">
+              <h5>Google Fonts</h5>
+            </div>
           </a>
-        </li>
-      </ul>
+
+          <a class="exclude-hover" href="https://fonts.google.com/specimen/Playfair+Display" target="_blank">
+            <p>Playfair Display</p>
+            <div class="citation-source">
+              <img src="https://www.gstatic.com/images/icons/material/apps/fonts/1x/catalog/v5/favicon.svg"
+                alt="source's website logo" width="32" height="32">
+              <h5>Google Fonts</h5>
+            </div>
+          </a>
+        </div>
+
+      </section>
+
+      <!-- Copy Writing -->
+      <section id="copy-writing">
+        <h3>Copy Writing</h3>
+
+        <div class="citation-link-wrapper">
+          <!-- use this as a template -->
+          <a class="exclude-hover" href="https://www.globeguide.ca/ultimate-guide-quebec-winter-carnival/"
+            target="_blank">
+            <p>Content: Activity Cards</p> <!-- question/smaller text -->
+            <div class="citation-source">
+              <img
+                src="https://www.globeguide.ca/wp-content/uploads/2014/06/cropped-Canada-BC-Osoyoos-Oliver-Twist-Tamara-6-2-1.jpg"
+                alt="source's website logo" width="32" height="32">
+              <h5>Globe Guide</h5> <!-- source name -->
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://leclaireuse.ca/carnaval-de-quebec-2022-nouveautes/" target="_blank">
+            <p>Content: Copy Writing</p>
+            <div class="citation-source">
+              <img
+                src="https://leclaireuse.ca/wp-content/uploads/2022/10/cropped-LECLAIREUSE_Logo-Eclaireuse-Couleurs-2048px-192x192.png"
+                alt="source's website logo" width="32" height="32">
+              <h5>L'Eclaireuse</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://lepointdevente.com/tickets/car210205001" target="_blank">
+            <p>Content: Effigy</p>
+            <div class="citation-source">
+              <img src="https://cdn.thepointofsale.com/themes/tpos/favicon-en-5f32b555.png" alt="source's website logo"
+                width="32" height="32">
+              <h5>Thepointofsale.com</h5>
+            </div>
+          </a>
+
+
+        </div>
+      </section>
+      <!-- Code References: CSS, HTML, Javascript -->
+      <section id="references-css">
+        <h3>Code Reference - CSS</h3>
+        <div class="citation-link-wrapper">
+
+          <a class="exclude-hover" href="https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align"
+            target="_blank">
+            <p>HOW to: Vertically align in CSS</p> <!-- question/smaller text -->
+            <div class="citation-source">
+              <img src="https://developer.mozilla.org/favicon-48x48.cbbd161b.png" alt="source's website logo" width="32"
+                height="32">
+              <h5>MDN Web Docs</h5> <!-- source name -->
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://www.w3schools.com/css/css_navbar_vertical.asp" target="_blank">
+            <p>HOW to: have vertical navigation bar</p>
+            <div class="citation-source">
+              <img src="https://www.w3schools.com/favicon.ico" alt="source's website logo" width="32" height="32">
+              <h5>W3Schools</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://www.w3schools.com/css/css3_shadows.asp" target="_blank">
+            <p>HOW to: have shadows in CSS</p>
+            <div class="citation-source">
+              <img src="https://www.w3schools.com/favicon.ico" alt="source's website logo" width="32" height="32">
+              <h5>W3Schools</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover"
+            href="https://www.w3schools.com/cssref/func_linear-gradient.php#:~:text=The%20linear%2Dgradient()%20function,along%20with%20the%20gradient%20effect."
+            target="_blank">
+            <p>HOW to: linear gradient in CSS</p>
+            <div class="citation-source">
+              <img src="https://www.w3schools.com/favicon.ico" alt="source's website logo" width="32" height="32">
+              <h5>W3Schools</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://www.w3schools.com/css/css3_object-fit.asp" target="_blank">
+            <p>HOW to: fit image in container</p>
+            <div class="citation-source">
+              <img src="https://www.w3schools.com/favicon.ico" alt="source's website logo" width="32" height="32">
+              <h5>W3Schools</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate"
+            target="_blank">
+            <p>HOW to: use translate()</p>
+            <div class="citation-source">
+              <img src="https://developer.mozilla.org/favicon-48x48.cbbd161b.png" alt="source's website logo" width="32"
+                height="32">
+              <h5>MDN Web Docs</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://www.uvm.edu/~bnelson/computer/css/changethespacingbetweenlines.html"
+            target="_blank">
+            <p>HOW to: Change spacing between lines</p>
+            <div class="citation-source">
+              <img src="https://www.uvm.edu/favicon.ico" alt="source's website logo" width="32" height="32">
+              <h5>University of Vermont - Computophilia</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://codepen.io/sosuke/pen/Pjoqqp" target="_blank">
+            <p>HOW to: Convert from black to target hex colour</p>
+            <div class="citation-source">
+              <img src="http://codepen.io/favicon.ico" alt="source's website logo" width="32" height="32">
+              <h5>CodePen</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://codepen.io/Web_Cifar/pen/dyXNVep" target="_blank">
+            <p>HOW to: Overlap layout with flex box</p>
+            <div class="citation-source">
+              <img src="http://codepen.io/favicon.ico" alt="source's website logo" width="32" height="32">
+              <h5>CodePen</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://www.geeksforgeeks.org/how-to-make-a-display-in-a-horizontal-row/"
+            target="_blank">
+            <p>HOW to: Display in a horizontal row</p>
+            <div class="citation-source">
+              <img src="https://geeksforgeeks.org/favicon.ico" alt="source's website logo" width="32" height="32">
+              <h5>Geeks for Geeks</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://stackoverflow.com/questions/7693224/how-do-i-right-align-div-elements"
+            target="_blank">
+            <p>HOW to: Right align elements </p>
+            <div class="citation-source">
+              <img src="https://stackoverflow.com/favicon.ico" alt="source's website logo" width="32" height="32">
+              <h5>StackOverflow</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://blog.logrocket.com/css-transitions-animating-hamburger-menu-button/"
+            target="_blank">
+            <p>HOW to: Animate toggle button (transition) </p>
+            <div class="citation-source">
+              <img src="https://blog.logrocket.com/wp-content/uploads/2019/06/cropped-cropped-favicon-196x196.png"
+                alt="source's website logo" width="32" height="32">
+              <h5>Log Rocket</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://developer.mozilla.org/en-US/docs/Web/CSS/:last-child" target="_blank">
+            <p>HOW to: use Last-Child- in CSS </p>
+            <div class="citation-source">
+              <img src="https://developer.mozilla.org/favicon-48x48.cbbd161b.png" alt="source's website logo" width="32"
+                height="32">
+              <h5>MDN Web Docs</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover"
+            href="https://www.studytonight.com/css-howtos/how-to-create-a-2column-layout-grid-with-css" target="_blank">
+            <p>HOW to: Create a 2-Column layout grid </p>
+            <div class="citation-source">
+              <img src="https://static.studytonight.com/css/resource.v3/icons/favicon/favicon.ico"
+                alt="source's website logo" width="32" height="32">
+              <h5>Studytonight</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://medium.com/geekculture/css-grid-responsive-grid-d83595fa7f26"
+            target="_blank">
+            <p>HOW to: Create a responsive grid </p>
+            <div class="citation-source">
+              <img src="https://miro.medium.com/v2/1*m-R_BkNf1Qjr1YbyOIJY2w.png" alt="source's website logo" width="32"
+                height="32">
+              <h5>Medium</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover"
+            href="https://stackoverflow.com/questions/27123399/how-to-move-an-image-up-and-down-smoothly-with-css"
+            target="_blank">
+            <p>HOW to: move image up and down smoothly with CSS </p>
+            <div class="citation-source">
+              <img src="https://stackoverflow.com/favicon.ico" alt="source's website logo" width="32" height="32">
+              <h5>StackOverflow</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto/Add_a_text_shadow"
+            target="_blank">
+            <p>HOW to: Add shadow to text </p>
+            <div class="citation-source">
+              <img src="https://developer.mozilla.org/favicon-48x48.cbbd161b.png" alt="source's website logo" width="32"
+                height="32">
+              <h5>MDN Web Docs</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://stackoverflow.com/questions/26125962/flex-box-shrink-before-wrap"
+            target="_blank">
+            <p>HOW to: use flex-bow: shrink before wrap </p>
+            <div class="citation-source">
+              <img src="https://stackoverflow.com/favicon.ico" alt="source's website logo" width="32" height="32">
+              <h5>StackOverflow</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://stackoverflow.com/questions/22429003/how-to-right-align-flex-item"
+            target="_blank">
+            <p>HOW to: right-align flex item</p> <!-- question/smaller text -->
+            <div class="citation-source">
+              <img src="https://stackoverflow.com/favicon.ico" alt="source's website logo" width="32" height="32">
+              <h5>StackOverflow</h5> <!-- source name -->
+            </div>
+          </a>
+
+          <a class="exclude-hover"
+            href="https://stackoverflow.com/questions/19574851/how-to-specify-an-element-after-which-to-wrap-in-css-flexbox"
+            target="_blank">
+            <p>HOW to: specify an element after which to wrap in css flexbox</p>
+            <div class="citation-source">
+              <img src="https://stackoverflow.com/favicon.ico" alt="source's website logo" width="32" height="32">
+              <h5>StackOverflow</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover"
+            href="https://stackoverflow.com/questions/44153866/how-can-i-get-the-height-of-an-element-using-css-only/68640180#68640180"
+            target="_blank">
+            <p>HOW to: get the height of an element using css only</p>
+            <div class="citation-source">
+              <img src="https://stackoverflow.com/favicon.ico" alt="source's website logo" width="32" height="32">
+              <h5>StackOverflow</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto/Add_a_text_shadow"
+            target="_blank">
+            <p>HOW to: add shadow to text</p>
+            <div class="citation-source">
+              <img src="https://developer.mozilla.org/favicon-48x48.cbbd161b.png" alt="source's website logo" width="32"
+                height="32">
+              <h5>MDN Web Docs</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto/Add_a_text_shadow"
+            target="_blank">
+            <p>HOW to: add shadow to text</p>
+            <div class="citation-source">
+              <img src="https://developer.mozilla.org/favicon-48x48.cbbd161b.png" alt="source's website logo" width="32"
+                height="32">
+              <h5>MDN Web Docs</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://www.w3schools.com/howto/howto_css_images_side_by_side.asp"
+            target="_blank">
+            <p>HOW to: align images side by side</p>
+            <div class="citation-source">
+              <img src="https://www.w3schools.com/favicon.ico" alt="source's website logo" width="32" height="32">
+              <h5>W3Schools</h5>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <section id="references-html">
+        <h3>Code Reference - HTML</h3>
+        <div class="citation-link-wrapper">
+          <a class="exclude-hover"
+            href="https://stackoverflow.com/questions/9601357/placing-border-inside-of-div-and-not-on-its-edge"
+            target="_blank">
+            <p>HOW to: Place border inside of div and not on edge</p>
+            <div class="citation-source">
+              <img src="https://stackoverflow.com/favicon.ico" alt="source's website logo" width="32" height="32">
+              <h5>StackOverflow</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href=" https://www.youtube.com/watch?v=AF6vGYIyV8M&ab_channel=GreatStack"
+            target="_blank">
+            <p>HOW to: Make a popup using HTML, CSS, and Javascript</p>
+            <div class="citation-source">
+              <img src="https://www.youtube.com/s/desktop/79c80fdc/img/favicon_144x144.png" alt="source's website logo"
+                width="32" height="32">
+              <h5>Youtube</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href=" https://www.youtube.com/watch?v=NHb3o3sP9iA" target="_blank">
+            <p>HOW to: Change image on hover with HTML and CSS</p>
+            <div class="citation-source">
+              <img src="https://www.youtube.com/s/desktop/79c80fdc/img/favicon_144x144.png" alt="source's website logo"
+                width="32" height="32">
+              <h5>Youtube</h5>
+            </div>
+          </a>
+        </div>
+      </section>
+
+
+      <section id="references-js">
+        <h3>Code Reference - Javascript</h3>
+        <div class="citation-link-wrapper">
+          <a class="exclude-hover" href="https://www.w3schools.com/jsref/jsref_string.asp" target="_blank">
+            <p>HOW to: use JavaScript String() method </p>
+            <div class="citation-source">
+              <img src="https://www.w3schools.com/favicon.ico" alt="source's website logo" width="32" height="32">
+              <h5>W3Schools</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://www.w3schools.com/howto/howto_js_get_current_window.asp"
+            target="_blank">
+            <p>HOW to: get the current screen size/browser window </p>
+            <div class="citation-source">
+              <img src="https://www.w3schools.com/favicon.ico" alt="source's website logo" width="32" height="32">
+              <h5>W3Schools</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover"
+            href="https://stackoverflow.com/questions/641857/javascript-window-resize-event/5655222#5655222"
+            target="_blank">
+            <p>HOW to: window resize event</p>
+            <div class="citation-source">
+              <img src="https://stackoverflow.com/favicon.ico" alt="source's website logo" width="32" height="32">
+              <h5>StackOverflow</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover"
+            href="https://stackoverflow.com/questions/36532307/rem-px-in-javascript/42769683#42769683" target="_blank">
+            <p>HOW to: use rem/px in javascript </p>
+            <div class="citation-source">
+              <img src="https://www.w3schools.com/favicon.ico" alt="source's website logo" width="32" height="32">
+              <h5>W3Schools</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://www.w3schools.com/howto/howto_js_media_queries.asp" target="_blank">
+            <p>HOW to: use media queries in Javascript </p>
+            <div class="citation-source">
+              <img src="https://www.w3schools.com/favicon.ico" alt="source's website logo" width="32" height="32">
+              <h5>W3Schools</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://www.w3schools.com/jsref/jsref_min.asp" target="_blank">
+            <p>HOW to: math min() method in Javascript </p>
+            <div class="citation-source">
+              <img src="https://www.w3schools.com/favicon.ico" alt="source's website logo" width="32" height="32">
+              <h5>W3Schools</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://www.w3schools.com/howto/howto_js_sidenav.asp" target="_blank">
+            <p>HOW to: Side Navigation </p>
+            <div class="citation-source">
+              <img src="https://stackoverflow.com/favicon.ico" alt="source's website logo" width="32" height="32">
+              <h5>StackOverflow</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover"
+            href="https://stackoverflow.com/questions/60061172/how-to-get-header-tag-without-using-jquery"
+            target="_blank">
+            <p>HOW to: Get a Headertag without Jquery. </p>
+            <div class="citation-source">
+              <img src="https://stackoverflow.com/favicon.ico" alt="source's website logo" width="32" height="32">
+              <h5>StackOverflow</h5>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://css-tricks.com/logic-in-css-media-queries/">
+            <p>HOW to: Logic in CSS Media Queries. </p>
+            <div class="citation-source">
+              <img src="https://css-tricks.com/favicon.ico" alt="source's website logo" width="32" height="32">
+              <h5>CSS Tricks</h5>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- Inspiration -->
+      <section id="inspiration">
+        <h3>Inspiration</h3>
+        <div class="citation-link-wrapper">
+          <a class="exclude-hover" href="https://twitter.com/redkeytar/status/1360008821666504711" target="_blank">
+            <img class="citation-image" src="img/club-penguin-map.jpg"
+              alt="Drawn image of a snowy map with buildings, igloos, and penguins surrounded by water" width="400">
+            <div class="citation-text-wrapper">
+              <h4>Club Penguin Map</h4>
+              <div class="citation-source">
+                <img class="white-background" src="https://upload.wikimedia.org/wikipedia/commons/c/ce/X_logo_2023.svg"
+                  alt="source's website logo" width="32" height="32">
+                <h5>X (Twitter)</h5>
+              </div>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://fr.maps-quebec-city.com/carnaval-de-qu%C3%A9bec-carte" target="_blank">
+            <img class="citation-image" src="img/carnaval-de-québec-carte.jpg"
+              alt="Drawn map of the current Carnaval de Quebec map" width="400">
+            <div class="citation-text-wrapper">
+              <h4>Carnaval de Quebec Map</h4>
+              <div class="citation-source">
+                <img src="img/quebec-maps-citation-favicon.png" alt="source's website logo" width="32"
+                  height="32">  <!-- insecure site doesn't load image, so must host locally -->
+                <h5>Quebec City Maps</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Images: Home Page -->
+      <section id="images-homepage">
+        <h3>Images - Home Page</h3>
+        <div class="citation-link-wrapper">
+
+          <!-- template w/ comments (complete) -->
+          <a class="exclude-hover exclude-citation-hover" href="img/hero-image-globe.png" target="_blank">
+            <!-- source link -->
+            <img class="citation-image" src="img/hero-image-globe.png" alt="Drawing of a snow globe with the interactive map on top with lights wrapped around" width="400">
+            <!-- image on our site -->
+            <div class="citation-text-wrapper">
+              <h4>Effigy</h4> <!-- image title/description -->
+              <div class="citation-source">
+                <h5>Drawn by Irena Ong</h5> <!-- source name -->
+              </div>
+            </div>
+          </a>
+
+
+          <a class="exclude-hover" href="https://www.facebook.com/carnavaldequebec/" target="_blank">
+            <img class="citation-image" src="img/logo.png" alt="Red circular logo with Bonhomme as the face"
+              width="400">
+            <div class="citation-text-wrapper">
+              <h4>Carnaval de Québec's Logo</h4>
+              <div class="citation-source">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg"
+                  alt="source's website logo" width="32" height="32">
+                <h5>Facebook</h5>
+              </div>
+            </div>
+          </a>
+
+          <a class="exclude-hover"
+            href="https://www.hotelchateaulaurier.com/en/carnaval-de-quebec-faire-de-lhiver-une-fete/" target="_blank">
+            <img class="citation-image" src="img/bonhomme-homepg-image.jpg" alt="Image of Bonhomme waving" width="400">
+            <div class="citation-text-wrapper">
+              <h4>Bonhomme</h4>
+              <div class="citation-source">
+                <img
+                  src="https://www.hotelchateaulaurier.com/wp-content/themes/hclq/assets/img/favicon/android-icon-192x192.png"
+                  alt="source's website logo" width="32" height="32">
+                <h5>Hôtel Château Laurier</h5>
+              </div>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://offmetro.com/ny/45349/quebec-carnival-2014/" target="_blank">
+            <img class="citation-image" src="img/About_Fire960x564.jpeg"
+              alt="Fisheye view of carnaval attendees surrounding a campfire roasting marshmallows" width="400">
+            <div class="citation-text-wrapper">
+              <h4>Firepit</h4>
+              <div class="citation-source">
+                <img src="https://offmetro.com/ca/wp-content/uploads/2018/12/logo2x-e1555941407628.png"
+                  alt="source's website logo" width="32" height="32">
+                <h5>offMetro</h5>
+              </div>
+            </div>
+          </a>
+
+          <a class="exclude-hover"
+            href="https://tourismexpress.com/nouvelles/carnaval-de-quebec-2022-retour-du-coeur-de-fete-et-des-grands-rendez-vous-musicaux"
+            target="_blank">
+            <img class="citation-image" src="img/effigy-card-two.jpg"
+              alt="2022 version of the Quebec Carnaval effigy; Bonhomme riding on a rainbow sash" width="400">
+            <div class="citation-text-wrapper">
+              <h4>Visitor's Guide: Effigies</h4>
+              <div class="citation-source">
+                <img src="https://tourismexpress.com/favicon.ico" alt="source's website logo" width="32" height="32">
+                <h5>TourismExpress</h5>
+              </div>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://www.globeguide.ca/ultimate-guide-quebec-winter-carnival"
+            target="_blank">
+            <img class="citation-image" src="img/quebec-carnaval-grounds.jpg"
+              alt="Snapshot view of attendees at the Carnaval" width="400">
+            <div class="citation-text-wrapper">
+              <h4>Visitor's Guide: Activities</h4>
+              <div class="citation-source">
+                <img
+                  src="https://www.globeguide.ca/wp-content/uploads/2014/06/cropped-Canada-BC-Osoyoos-Oliver-Twist-Tamara-6-2-1.jpg"
+                  alt="source's website logo" width="32" height="32">
+                <h5>Globe Guide</h5>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- Image Assets: Map Content -->
+      <section id="images-popup">
+        <h3> Images - Activity Popup</h3>
+        <div class="citation-link-wrapper">
+
+          <a class="exclude-hover" href="https://www.flickr.com/photos/15609463@N03/8474243251" target="_blank">
+            <img class="citation-image" src="img/popup-images/DogSled4663x3107.jpg"
+              alt="Image of dogs and dog driver participating in a dog sledding event" width="400">
+            <div class="citation-text-wrapper">
+              <h4>Activity: Dog Sledding</h4>
+              <div class="citation-source">
+                <img src="https://www.flickr.com/favicon.ico" alt="source's website logo" width="32" height="32">
+                <h5>Flickr</h5>
+              </div>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://happytowander.com/quebec-winter-carnival-food-drinks-guide/"
+            target="_blank">
+            <img class="citation-image" src="img/popup-images/Food1500x1000.jpeg"
+              alt="Image of a Canadian treat at the food truck alley" width="400">
+            <div class="citation-text-wrapper">
+              <h4>Activity: Food truck</h4>
+              <div class="citation-source">
+                <img src="https://happytowander.com/wp-content/uploads/cropped-Favicon-New-2021-192x192.png"
+                  alt="source's website logo" width="32" height="32">
+                <h5>Happy to Wander</h5>
+              </div>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://www.london-unattached.com/quebec-city-winter-carnival/"
+            target="_blank">
+            <img class="citation-image" src="img/popup-images/Canoe1024x768.jpeg"
+              alt="Image of five participants partaking in the ice canoeing event" width="400">
+            <div class="citation-text-wrapper">
+              <h4>Activity: Ice Canoe Racing</h4>
+              <div class="citation-source">
+                <img
+                  src="https://www.london-unattached.com/wp-content/uploads/2016/01/small-square-London-Unattached-300x300.jpg"
+                  alt="source's website logo" width="32" height="32">
+                <h5>London Unattached</h5>
+              </div>
+            </div>
+          </a>
+
+          <a class="exclude-hover"
+            href="https://www.quebec-cite.com/en/what-to-do-quebec-city/events/quebec-winter-carnival" target="_blank">
+            <img class="citation-image" src="img/popup-images/OutdoorConcert1209×680.jpeg"
+              alt="Image of the outdoor concert with Bonhomme waving to the crowd" width="400">
+            <div class="citation-text-wrapper">
+              <h4>Activity: Outdoor Concert</h4>
+              <div class="citation-source">
+                <img src="https://www.quebec-cite.com/sites/otq/themes/custom/otq/img/icons/android-icon-192x192.png"
+                  alt="source's website logo" width="32" height="32">
+                <h5>Quebec Cité</h5>
+              </div>
+            </div>
+          </a>
+
+          <a class="exclude-hover"
+            href="https://www.quebec-cite.com/en/what-to-do-quebec-city/events/quebec-winter-carnival" target="_blank">
+            <img class="citation-image" src="img/popup-images/IcePalace1375x1020.jpg" alt="Image of ice sculptures"
+              width="400">
+            <div class="citation-text-wrapper">
+              <h4>Activity: Ice Sculpture</h4>
+              <div class="citation-source">
+                <img src="https://www.quebec-cite.com/sites/otq/themes/custom/otq/img/icons/android-icon-192x192.png"
+                  alt="source's website logo" width="32" height="32">
+                <h5>Quebec Cité</h5>
+              </div>
+            </div>
+          </a>
+
+          <a class="exclude-hover"
+            href="https://ced.canada.ca/en/success-stories/quebec-winter-carnival-celebrating-winter/" target="_blank">
+            <img class="citation-image" src="img/popup-images/Bonhomme1262x946.jpeg"
+              alt="Image of Bonhomme and attendees" width="400">
+            <div class="citation-text-wrapper">
+              <h4>Activity: Bonhomme</h4>
+              <div class="citation-source">
+                <img src="https://canada.ca/favicon.ico" alt="source's website logo" width="32" height="32">
+                <h5>Government of Canada</h5>
+              </div>
+            </div>
+          </a>
+
+
+          <a class="exclude-hover" href="https://www.vecteezy.com/png/1194635-snowflake" target="_blank">
+            <img class="citation-image" src="img/snowflake-asset.png" alt="A blue snowflake png asset" width="400">
+            <div class="citation-text-wrapper">
+              <h4>Asset: Snowflake</h4>
+              <div class="citation-source">
+                <img src="https://www.vecteezy.com/favicon.ico" alt="source's website logo" width="32" height="32">
+                <h5>Vecteezy</h5>
+              </div>
+            </div>
+          </a>
+
+
+        </div>
+      </section>
+
+
+      <!-- Image Assets: Map Content -->
+      <section id="drawings-icons-mascot">
+        <h3>Map Drawings - Activity Icons and Mascots </h3>
+        <h5>Assets drawn by Irena Ong</h5>
+        <div class="citation-link-wrapper">
+
+          <a class="exclude-hover concert-icon" href="img/map-icons/concert-icon.png" target="_blank">
+            <img class="citation-image" src="img/map-icons/concert-icon.png" width="400"
+              alt="Drawn concert activity asset of the outdoor concert for the interactive map">
+            <h4>Activity: Outdoor Concert</h4>
+          </a>
+
+          <a class="exclude-hover ice-palace-icon" href="img/map-icons/ice-palace-icon.png" target="_blank">
+            <img class="citation-image" src="img/map-icons/ice-palace-icon.png" width="400"
+              alt="Drawn ice bear sculpture activity asset for the interactive map">
+            <h4>Activity: Ice Sculpture</h4>
+          </a>
+
+          <a class="exclude-hover canadian-food-icon" href="img/map-icons/canadian-food-icon.png" target="_blank">
+            <img class="citation-image" src="img/map-icons/canadian-food-icon.png" width="400"
+              alt="Drawn food truck activity asset of the food truck alley for the interactive map">
+            <h4>Activity: Food trucks</h4>
+          </a>
+
+          <a class="exclude-hover parade-icon" href="img/map-icons/parade-icon.png" target="_blank">
+            <img class="citation-image" src="img/map-icons/parade-icon.png" width="400"
+              alt="Drawn parade activity asset for the interactive map">
+            <h4>Activity: Parade</h4>
+          </a>
+
+          <a class="exclude-hover ice-canoeing-icon" href="img/map-icons/ice-canoeing-icon.png" target="_blank">
+            <img class="citation-image" src="img/map-icons/ice-canoeing-icon.png" width="400"
+              alt="Drawing of a bunny in a canoe for the interactive map">
+            <h4>Activity: Ice Canoe Racing</h4>
+          </a>
+
+          <a class="exclude-hover dog-sledding-icon" href="img/map-icons/dog-sledding-icon.png" target="_blank">
+            <img class="citation-image" src="img/map-icons/dog-sledding-icon.png" width="400"
+              alt="Drawing of 3 dogs sitting on a sled for the interactive map">
+            <h4>Activity: Dog Sledding</h4>
+          </a>
+
+          <a class="exclude-hover exclude-citation-hover" href="img/New-Mascots/New-Concert-Mascot.png" target="_blank">
+            <img class="citation-image" src="img/New-Mascots/New-Concert-Mascot.png" width="400"
+              alt="A drawn snow geese mascot for the outdoor concert">
+            <h4>Mascot: Outdoor Concert</h4>
+          </a>
+
+          <a class="exclude-hover exclude-citation-hover" href="img/New-Mascots/New-Bonhomme-Mascot.png" target="_blank">
+            <img class="citation-image" src="img/New-Mascots/New-Bonhomme-Mascot.png" width="400"
+              alt="A drawn Bonhomme mascot for the ice palace activity">
+            <h4>Mascot: Ice Sculpture</h4>
+          </a>
+
+          <a class="exclude-hover exclude-citation-hover" href="img/New-Mascots/New-FoodTruck-Mascot.png" target="_blank">
+            <img class="citation-image" src="img/New-Mascots/New-FoodTruck-Mascot.png" width="400"
+              alt="Drawing of a white bear in a chef's hat, holding a honey jar for the interactive map">
+            <h4>Mascot: Food trucks</h4>
+          </a>
+
+          <a class="exclude-hover exclude-citation-hover" href="img/New-Mascots/New-Parade-Mascot.png" target="_blank">
+            <img class="citation-image" src="img/New-Mascots/New-Parade-Mascot.png" width="400"
+              alt="Drawing of a white deer mascot for the interactive map">
+            <h4>Mascot: Parade</h4>
+          </a>
+
+          <a class="exclude-hover exclude-citation-hover" href="img/New-Mascots/New-Canoe-Mascot.png" target="_blank">
+            <img class="citation-image" src="img/New-Mascots/New-Canoe-Mascot.png" width="400"
+              alt="Drawing of a brown bunny mascot holding a paddle for the interactive map">
+            <h4>Mascot: Ice Canoe Racing</h4>
+          </a>
+
+          <a class="exclude-hover exclude-citation-hover" href="img/New-Mascots/New-Sled-Mascot.png" target="_blank">
+            <img class="citation-image" src="img/New-Mascots/New-Sled-Mascot.png" width="400"
+              alt="Drawing of a brown and white dog mascot for the interactive map">
+            <h4>Mascot: Dog Sledding</h4>
+          </a>
+        
+        </div>
+      </section>
+
+      <section id="drawings-map">
+        <h3 class="white-text">Map Drawings - Interactive Map</h3>
+        <h5 class="white-text">Map drawn by Steven Chan, character assets drawn by Irena Ong</h5>
+        <div class="citation-link-wrapper">
+
+          <a class="exclude-hover exclude-citation-hover" href="img/maps/mapfinal-3840-2160.png" target="_blank">
+            <img class="citation-image" src="img/maps/mapfinal-3840-2160.png"
+              alt="Drawn Carnaval de Quebec map in the style of Club Penguin with character assets and details"
+              width="400">
+            <h4>Interactive Map: Desktop</h4>
+          </a>
+
+          <a class="exclude-hover exclude-citation-hover" href="img/maps/mapfinal-2160-2160.png" target="_blank">
+            <img class="citation-image" src="img/maps/mapfinal-2160-2160.png"
+              alt="Drawn Carnaval de Quebec map in the style of Club Penguin with character assets and details surrounding a cul-de-sac"
+              width="400">
+            <h4>Interactive Map: Breakpoint</h4>
+          </a>
+
+          <a class="exclude-hover exclude-citation-hover" href="img/maps/mapfinal-975-4220.png" target="_blank">
+            <img class="citation-image" src="img/maps/mapfinal-975-4220.png"
+              alt="Drawn Carnaval de Quebec map in the style of Club Penguin with character assets and details in a vertical pathway"
+              width="400">
+            <h4>Interactive Map: Mobile</h4>
+          </a>
+        </div>
+      </section>
+
+      <section id="ui-icons">
+        <h3 class="white-text">UI Icons</h3>
+        <div class="citation-link-wrapper">
+
+          <a class="exclude-hover" href="img/Arrow.svg" target="_blank">
+            <img class="citation-image citation-icon" src="img/Arrow.svg" alt="UI icon of a map" width="400">
+            <div class="citation-text-wrapper">
+              <h4>Mobile Menu: Back Arrow</h4>
+              <div class="citation-source">
+                <h5>Drawn by Max Nielsen</h5>
+              </div>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="img/close-icon-white.svg" target="_blank">
+            <img class="citation-image citation-icon" src="img/close-icon-white.svg" alt="UI icon of a map" width="400">
+            <div class="citation-text-wrapper">
+              <h4>Popup: Close Icon</h4>
+              <div class="citation-source">
+                <h5>Drawn by Max Nielsen</h5>
+              </div>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="img/map-icon.svg" target="_blank">
+            <img class="citation-image citation-icon" src="img/map-icon.svg" alt="UI icon of a map" width="400">
+            <div class="citation-text-wrapper">
+              <h4>Home pg: Map UI Icon</h4>
+              <div class="citation-source">
+                <h5>Drawn by Max Nielsen</h5>
+              </div>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://thenounproject.com/icon/question-mark-745059/" target="_blank">
+            <img class="citation-image citation-icon" src="img/question-mark-icon.svg" alt="UI icon of a map" width="400">
+            <div class="citation-text-wrapper">
+              <h4>Hero Button: What is an Effigy?</h4>
+              <div class="citation-source">
+                <img src="https://thenounproject.com/favicon.ico"
+                  alt="source's website logo" width="32" height="32">
+                <h5>Iconfinder</h5>
+              </div>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://www.iconfinder.com/icons/104501/" target="_blank">
+            <img class="citation-image citation-icon" src="img/twitter-icon.svg" alt="UI icon of a map" width="400">
+            <div class="citation-text-wrapper">
+              <h4>Footer: Twitter UI Icon</h4>
+              <div class="citation-source">
+                <img src="https://www.iconfinder.com/static/img/favicons/android-chrome-192x192.png"
+                  alt="source's website logo" width="32" height="32">
+                <h5>Iconfinder</h5>
+              </div>
+            </div>
+          </a>
+
+
+          <a class="exclude-hover" href="https://www.iconfinder.com/icons/1161953/" target="_blank">
+            <img class="citation-image citation-icon" src="img/instagram-icon.svg" alt="UI icon of a map" width="400">
+            <div class="citation-text-wrapper">
+              <h4>Footer: Instagram UI Icon</h4>
+              <div class="citation-source">
+                <img src="https://www.iconfinder.com/static/img/favicons/android-chrome-192x192.png"
+                  alt="source's website logo" width="32" height="32">
+                <h5>Iconfinder</h5>
+              </div>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://www.iconfinder.com/icons/8666536/" target="_blank">
+            <img class="citation-image citation-icon" src="img/youtube-icon.svg" alt="UI icon of a map" width="400">
+            <div class="citation-text-wrapper">
+              <h4>Footer: Youtube UI Icon</h4>
+              <div class="citation-source">
+                <img src="https://www.iconfinder.com/static/img/favicons/android-chrome-192x192.png"
+                  alt="source's website logo" width="32" height="32">
+                <h5>Iconfinder</h5>
+              </div>
+            </div>
+          </a>
+
+          <a class="exclude-hover" href="https://www.iconfinder.com/icons/5305153" target="_blank">
+            <img class="citation-image citation-icon" src="img/facebook-icon.svg" alt="UI icon of a map" width="400">
+            <div class="citation-text-wrapper">
+              <h4>Footer: Facebook UI Icon</h4>
+              <div class="citation-source">
+                <img src="https://www.iconfinder.com/static/img/favicons/android-chrome-192x192.png"
+                  alt="source's website logo" width="32" height="32">
+                <h5>Iconfinder</h5>
+              </div>
+            </div>
+          </a>
+
+          
+
+          
+
+          
+
+        </div>
+      </section>
+
     </div>
-  </section>
+  </main>
 
-  <section id="copy-writing">
-    <h4>copy writing</h4>
-    <div class="copy-writing-list">
-      <ul>
-        <li> <a href="https://www.globeguide.ca/ultimate-guide-quebec-winter-carnival/">
-            https://www.globeguide.ca/ultimate-guide-quebec-winter-carnival/
-          </a></li>
-        <li><a
-            href="https://leclaireuse.ca/carnaval-de-quebec-2022-nouveautes/">https://leclaireuse.ca/carnaval-de-quebec-2022-nouveautes/
-          </a></li>
-        <li><a href="https://lepointdevente.com/tickets/car210205001">https://lepointdevente.com/tickets/car210205001</a></li>
-        <li><a href="https://carnaval.qc.ca/">https://carnaval.qc.ca/
-          </a> </li>
-      </ul>
-    </div>
-  </section>
-
-
-  <section id="code-reference">
-    <div>
-      <h4>code reference</h4>
-    </div>
-    <div class="code-list">
-      <ul>
-        <li>Placing border insider of div and not on its edge. From <a
-            href="https://stackoverflow.com/questions/9601357/placing-border-inside-of-div-and-not-on-its-edge">
-            https://stackoverflow.com/questions/9601357/placing-border-inside-of-div-and-not-on-its-edge
-          </a></li>
-        <li>Vertical-Align CSS. From<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align">
-            https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align
-          </a></li>
-        <li>CSS Vertical Navigation Bar. From<a href="https://www.w3schools.com/css/css_navbar_vertical.asp">
-            https://www.w3schools.com/css/css_navbar_vertical.asp
-          </a></li>
-
-        <li>CSS Shadow Effects. From <a
-            href="https://www.w3schools.com/css/https://www.w3schools.com/css/css3_shadows.asp">
-            https://www.w3schools.com/css/css3_shadows.asp </a></li>
-        <li>CSS linear-gradient() function. From<a
-            href="https://www.w3schools.com/cssref/func_linear-gradient.php#:~:text=The%20linear%2Dgradient()%20function,along%20with%20the%20gradient%20effect.">
-            https://www.w3schools.com/cssref/func_linear-gradient.php#:~:text=The%20linear%2Dgradient()%20function,along%20with%20the%20gradient%20effect.
-          </a></li>
-        <li>CSS object-fit Property. From <a href="https://www.w3schools.com/css/css3_object-fit.asp">
-            https://www.w3schools.com/css/css3_object-fit.asp </a></li>
-        <li>translate() - CSS: Cascading Style Sheets. From<a
-            href=" https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate">
-            https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate</a></li>
-        <li>CSS- Space- Change the Spacing Between Lines. From <a
-            href="https://www.uvm.edu/~bnelson/computer/css/changethespacingbetweenlines.html#:~:text=Use%20the%20line%2Dheight%20property,of%20vertical%20space%20between%20lines.">
-            https://www.uvm.edu/~bnelson/computer/css/changethespacingbetweenlines.html#:~:text=Use%20the%20line%2Dheight%20property,of%20vertical%20space%20between%20lines.</a>
-        </li>
-        <li>CSS filter generator to convert from black to target hex colour. From <a
-            href="https://codepen.io/sosuke/pen/Pjoqqp">
-            https://codepen.io/sosuke/pen/Pjoqqp </a></li>
-        <li>Overlapping Layout With Flex Box. From <a href="https://codepen.io/Web_Cifar/pen/dyXNVep">
-            https://codepen.io/Web_Cifar/pen/dyXNVep </a></li>
-        <li>Display in a Horizontal Row. From <a
-            href="https://www.geeksforgeeks.org/how-to-make-a-display-in-a-horizontal-row/">
-            https://www.geeksforgeeks.org/how-to-make-a-display-in-a-horizontal-row/ </a></li>
-        <li>Right align div elements. From <a
-            href=" https://stackoverflow.com/questions/7693224/how-do-i-right-align-div-elements">
-            https://stackoverflow.com/questions/7693224/how-do-i-right-align-div-elements</a></li>
-        <li>CSS transition: animating a toggle button. From <a
-            href="https://blog.logrocket.com/css-transitions-animating-hamburger-menu-button/">
-            https://blog.logrocket.com/css-transitions-animating-hamburger-menu-button/</a></li>
-        <li>Make a Popup using HTML, CSS and JavaScript. From <a
-            href="https://www.youtube.com/watch?v=AF6vGYIyV8M&ab_channel=GreatStack">
-            https://www.youtube.com/watch?v=AF6vGYIyV8M&ab_channel=GreatStack </a></li>
-        <li>Last-Child- CSS: Cascading Style Sheet. From <a
-            href="https://developer.mozilla.org/en-US/docs/Web/CSS/:last-child">
-            https://developer.mozilla.org/en-US/docs/Web/CSS/:last-child </a></li>
-        <li>create a 2-column layout grid with CSS. From <a
-            href="https://www.studytonight.com/css-howtos/how-to-create-a-2column-layout-grid-with-css">
-            https://www.studytonight.com/css-howtos/how-to-create-a-2column-layout-grid-with-css</a></li>
-        <li>CSS Grid: Responsive Grid. From <a
-            href="https://medium.com/geekculture/css-grid-responsive-grid-d83595fa7f26">
-            https://medium.com/geekculture/css-grid-responsive-grid-d83595fa7f26</a></li>
-        <li>How to Change Image on Hover with HTML & CSS. From <a href="https://www.youtube.com/watch?v=NHb3o3sP9iA">
-            https://www.youtube.com/watch?v=NHb3o3sP9iA</a></li>
-        <li>How to move an image up and down smoothly with CSS. From <a
-            href="https://stackoverflow.com/questions/27123399/how-to-move-an-image-up-and-down-smoothly-with-css">
-            https://stackoverflow.com/questions/27123399/how-to-move-an-image-up-and-down-smoothly-with-css</a></li>
-        <li>How to add a shadow to text. From <a href="https://www.youtube.com/watch?v=NHb3o3sP9iA">
-            https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto/Add_a_text_shadow</a></li>
-
-        <li>flex-bow: shrink before wrap. From <a
-            href="https://stackoverflow.com/questions/26125962/flex-box-shrink-before-wrap">
-            https://stackoverflow.com/questions/26125962/flex-box-shrink-before-wrap</a></li>
-        <li>how to right-align flex item? From <a
-            href="https://stackoverflow.com/questions/22429003/how-to-right-align-flex-item">https://stackoverflow.com/questions/22429003/how-to-right-align-flex-item
-          </a></li>
-        <li>How to specify an element after which to wrap in css flexbox? From <a
-            href="https://stackoverflow.com/questions/19574851/how-to-specify-an-element-after-which-to-wrap-in-css-flexbox">https://stackoverflow.com/questions/19574851/how-to-specify-an-element-after-which-to-wrap-in-css-flexbox
-          </a></li>
-        <li>JavaScript String() Method. From <a
-            href="https://www.w3schools.com/jsref/jsref_string.asp">https://www.w3schools.com/jsref/jsref_string.asp
-          </a></li>
-        <li>How to get the current screen size/browser window.From <a
-            href="https://www.w3schools.com/howto/howto_js_get_current_window.asp">From
-            https://www.w3schools.com/howto/howto_js_get_current_window.asp
-          </a></li>
-        <li>JavaScript Window resize event. From <a
-            href="https://stackoverflow.com/questions/641857/javascript-window-resize-event/5655222#5655222">https://stackoverflow.com/questions/641857/javascript-window-resize-event/5655222#5655222
-          </a></li>
-        <li>rem px in Javascript. From <a
-            href=" https://stackoverflow.com/questions/36532307/rem-px-in-javascript/42769683#42769683">
-            https://stackoverflow.com/questions/36532307/rem-px-in-javascript/42769683#42769683
-          </a></li>
-        <li>How to use Media Queries in JavaScript. From <a
-            href="https://www.w3schools.com/howto/howto_js_media_queries.asp">https://www.w3schools.com/howto/howto_js_media_queries.asp
-          </a></li>
-        <li>JavaScript Math min() Method.From <a
-            href="https://www.w3schools.com/jsref/jsref_min.asp">https://www.w3schools.com/jsref/jsref_min.asp
-          </a></li>
-        <li>How can I get the Height of an element using css only. From <a
-            href="https://stackoverflow.com/questions/44153866/how-can-i-get-the-height-of-an-element-using-css-only/68640180#68640180">https://stackoverflow.com/questions/44153866/how-can-i-get-the-height-of-an-element-using-css-only/68640180#68640180
-          </a></li>
-        <li>How to add a shadow to text. From <a
-            href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto/Add_a_text_shadow">https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto/Add_a_text_shadow
-          </a></li>
-        <li>Styling input and span as button class, slight difference From <a
-            href="https://stackoverflow.com/questions/27570581/styling-input-and-span-as-button-class-slight-difference">https://stackoverflow.com/questions/27570581/styling-input-and-span-as-button-class-slight-difference
-          </a></li>
-        <li>How TO - Read More Read Less Button From <a
-            href="https://www.w3schools.com/howto/howto_js_read_more.asp">https://www.w3schools.com/howto/howto_js_read_more.asp
-          </a></li>
-        <li>How TO - Align Images Side By Side. From <a
-            href="https://www.w3schools.com/howto/howto_css_images_side_by_side.asp">https://www.w3schools.com/howto/howto_css_images_side_by_side.asp
-          </a></li>
-        <li>How TO - Side Navigation. From <a
-            href="https://www.w3schools.com/howto/howto_css_images_side_by_side.asp">https://www.w3schools.com/howto/howto_js_sidenav.asp
-          </a></li>
-
-        <li>HOW to - Add a favicon. From <a
-            href="https://linuxhint.com/add-favicon-in-html/">https://linuxhint.com/add-favicon-in-html/</a></li>
-
-        <li>HOW to - MouseEvent Object. From <a
-            href="https://www.w3schools.com/jsref/obj_mouseevent.asp">https://www.w3schools.com/jsref/obj_mouseevent.asp</a>
-        </li>
-
-        <li>HOW to - Get a Headertag without Jquery. From <a
-            href="https://stackoverflow.com/questions/60061172/how-to-get-header-tag-without-using-jquery">https://stackoverflow.com/questions/60061172/how-to-get-header-tag-without-using-jquery</a>
-        </li>
-
-        <li>Logic in CSS Media Queries. From <a
-            href="https://css-tricks.com/logic-in-css-media-queries/">https://css-tricks.com/logic-in-css-media-queries/</a>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-
-  <section id="inspiration">
-    <div>
-      <h4>inspiration</h4>
-    </div>
-    <div class="inspiration-list">
-      <ul>
-        <li> Club Penguin Map. From
-          <a href="https://twitter.com/redkeytar/status/1360008821666504711">https://twitter.com/redkeytar/status/1360008821666504711
-            https://developer.mozilla.org/en-US/docs/Web/CSS/:last-child </a>
-        </li>
-        <li> Quebec de Carnaval Map. From <a
-            href="https://fr.maps-quebec-city.com/carnaval-de-qu%C3%A9bec-carte">https://fr.maps-quebec-city.com/carnaval-de-qu%C3%A9bec-carte</a>
-        </li>
-        <li> Trees on the Map. From <a
-            href="https://cdn-icons-png.flaticon.com/512/281/281539.png">https://cdn-icons-png.flaticon.com/512/281/281539.png</a>
-        </li>
-      </ul>
-    </div>
-  </section>
-
+  <!-- ****** MAIN CONTENT ENDS ****** -->
   
-  <section id="images-home-title">
-    <div>
-      <h4>images(home)</h4>
-    </div>
-  </section>
-  
-  <section id="images-home">
-    <div class="home-page-image">
-      <h5>Effigy</h5>
-      <a href="https://lepointdevente.com/tickets/car210205001"><img src="img/hero-img-effigy370x904.png" width="170"
-          height="404" alt="effigy"> </a>
-    </div>
-
-    <div class="home-page-image">
-      <h5>Logo</h5>
-      <a href="https://www.facebook.com/carnavaldequebec/"><img src="img/logo.png" width="365" height="365"
-          alt="company logo"> </a>
-    </div>
-
-    <div class="home-page-image">
-      <h5>Bonhomme</h5>
-      <a href="https://www.hotelchateaulaurier.com/en/carnaval-de-quebec-faire-de-lhiver-une-fete/"><img
-          src="img/bonhomme-homepg-image.jpg" width="450" height="334" alt="snowman waving"> </a>
-    </div>
-
-    <div class="home-page-image">
-      <h5>Fireplace</h5>
-      <a href="https://offmetro.com/ny/45349/quebec-carnival-2014/"><img src="img/About_Fire960x564.jpeg" width="450"
-          height="334" alt="Fisheye view of carnaval attendees surrounding a campfire roasting marshmallows"></a>
-    </div>
-
-    <div class="home-page-image">
-      <h5>Visitor Guide Card: Effigies</h5>
-      <a
-        href="https://tourismexpress.com/nouvelles/carnaval-de-quebec-2022-retour-du-coeur-de-fete-et-des-grands-rendez-vous-musicaux"><img
-          src="img/effigy-card-two.jpg" width="450" height="334"
-          alt="2022 version of the Quebec Carnaval effigy; Bonhomme riding on a rainbow sash"></a>
-    </div>
-
-    <div class="home-page-image">
-      <h5>Visitor Guide Card: Activity</h5>
-      <a href="https://www.globeguide.ca/ultimate-guide-quebec-winter-carnival/"><img
-          src="img/quebec-carnaval-grounds.jpg" width="450" height="334"
-          alt="Snapshot view of attendees at the Carnaval"></a>
-    </div>
-  </section>
-
-  <section id="images-popup-title">
-    <div>
-      <h4>images(pop-up)</h4>
-    </div>
-  </section>
-  <section id="images-popup">
-    <div>
-      <h5>Dog Sledding</h5>
-      <a href="https://www.flickr.com/photos/15609463@N03/8474243251"><img src="img/popup-images/DogSled4663x3107.jpg"
-          width="450" height="334" alt="Image of dogs and dog driver participating in a dog sledding event"> </a>
-    </div>
-
-    <div>
-      <h5>Local Cuisine</h5>
-      <a href="https://happytowander.com/quebec-winter-carnival-food-drinks-guide/"><img
-          src="img/popup-images/Food1500x1000.jpeg" width="450" height="334"
-          alt="Image of a Canadian treat at the food truck alley "> </a>
-    </div>
-
-    <div>
-      <h5>Ice Canoe Racing</h5>
-      <a href="https://www.london-unattached.com/quebec-city-winter-carnival/"><img
-          src="img/popup-images/Canoe1024x768.jpeg" width="450" height="334"
-          alt="Image of five participants partaking in the ice canoeing event"> </a>
-    </div>
-
-    <div>
-      <h5>Bonhomme Mascot</h5>
-      <a href="hhttps://ced.canada.ca/en/success-stories/quebec-winter-carnival-celebrating-winter/"><img
-          src="img/popup-images/Bonhomme1262x946.jpeg" width="450" height="334" alt="Image of Bonhomme and attendees">
-      </a>
-    </div>
-
-    <div>
-      <h5>Ice Palace</h5>
-      <a href="https://www.quebec-cite.com/en/what-to-do-quebec-city/events/quebec-winter-carnival"><img
-          src="img/popup-images/IcePalace1375x1020.jpg" width="450" height="334" alt="Image of ice sculptures">
-      </a>
-    </div>
-
-    <div>
-      <h5>Outdoor Concert</h5>
-      <a href="https://www.quebec-cite.com/en/what-to-do-quebec-city/events/quebec-winter-carnival"><img
-          src="img/popup-images/OutdoorConcert1209×680.jpeg" width="450" height="334"
-          alt="Image of the outdoor concert with Bonhomme waving to the crowd"> </a>
-    </div>
-
-    <div>
-      <h5>Snowflake Asset</h5>
-      <a href="https://www.vecteezy.com/png/1194635-snowflake"><img src="img/snowflake-asset.png" width="131"
-          height="148" alt="A blue snowflake png asset"></a>
-    </div>
-  </section>
-
-  <section id="images-map-content-title">
-    <h4>image assets (map-content) </h4>
-
-    <h5> drawn by Irena Ong </h5>
-
-  </section>
-
-  <section id="images-map-content">
-
-    <div>
-      <h5>Outdoor Concert</h5>
-      <img src="img/map-icons/concert-icon.png" width="411" height="250"
-        alt="Drawn concert activity asset of the outdoor concert for the interactive map">
-      <img src="img/New-Mascots/New-Concert-Mascot.png" width="221" height="250"
-        alt="A drawn snow geese mascot for the outdoor concert ">
-    </div>
-
-    <div>
-      <h5>Ice Palace</h5>
-      <img src="img/map-icons/ice-palace-icon.png" width="276" height="250"
-        alt="Drawn ice bear sculpture activity asset for the interactive map">
-      <img src="img/New-Mascots/New-Bonhomme-Mascot.png" width="201" height="250"
-        alt="A drawn Bonhomme mascot for the ice palace activity">
-    </div>
-
-    <div>
-      <h5>Canadian Food Truck</h5>
-      <img src="img/map-icons/canadian-food-icon.png" width="398" height="250"
-        alt="Drawn food truck activity asset of the food truck alley for the interactive map">
-      <img src="img/New-Mascots/New-FoodTruck-Mascot.png" width="214" height="250"
-        alt="Drawing of a white bear in a chef's hat, holding a honey jar for the interactive map">
-    </div>
-
-    <div>
-      <h5>Parade</h5>
-      <img src="img/map-icons/parade-icon.png" width="469" height="250"
-        alt="Drawn parade activity asset for the interactive map">
-      <img src="img/New-Mascots/New-Parade-Mascot.png" width="260" height="250"
-        alt="Drawing of a white deer mascot for the interactive map">
-    </div>
-
-    <div>
-      <h5>Ice Canoe Racing</h5>
-      <img src="img/map-icons/ice-canoeing-icon.png" width="292" height="250"
-        alt="Drawing of a bunny in a canoe for the interactive map">
-      <img src="img/New-Mascots/New-Canoe-Mascot.png" width="219" height="250"
-        alt="Drawing of a brown bunny mascot holding a paddle for the interactive map">
-    </div>
-
-    <div>
-      <h5>Dog Sledding</h5>
-      <img src="img/map-icons/dog-sledding-icon.png" width="408" height="250"
-        alt="Drawing of 3 dogs sitting on a sled for the interactive map">
-      <img src="img/New-Mascots/New-Sled-Mascot.png" width="194" height="250"
-        alt="Drawing of a brown and white dog mascot for the interactive map">
-    </div>
-
-    <div>
-      <h5>Hero Image: Snow Globe</h5>
-      <img src="img/Night-Globe.png" width="204" height="291"
-        alt="drawing of a snow globe with the interactive map on top with lights wrapped around">
-      <img src="img/hero-image-globe.png" width="204" height="291"
-        alt="drawing of a snow globe with the interactive map on top with lights wrapped around">
-    </div>
-
-  </section>
-
-  <section id="images-map-title">
-    <h4>images assets (map) </h4>
-    <h5> drawn by Steven Chan, character assets by Irena Ong </h5>
-  </section>
-
-  <section id="images-map">
-
-
-    <div>
-      <h5>Interactive Map (Desktop, Breakpoint, Mobile)</h5>
-      <img src="img/maps/mapfinal-3840-2160.png" width="1102" height="620" alt="map">
-      <img src="img/maps/mapfinal-2160-2160.png" width="536" height="536" alt="map">
-      <img src="img/maps/mapfinal-975-4220.png" width="247" height="536" alt="map">
-    </div>
-  </section>
-
-  <section id="icons-title">
-    <div>
-      <h4>icons</h4>
-    </div>
-  </section>
-
-  <section id="icons">
-
-    <div>
-      <h5>map icon</h5>
-
-      <a href="https://www.iconfinder.com/"><img src="img/map-icon.svg" width="200" height="200" alt="map"></a>
-    </div>
-
-    <div>
-      <h5>twitter icon</h5>
-      <a href="https://www.iconfinder.com/"><img src="img/twitter-icon.svg" width="200" height="200" alt="map"></a>
-    </div>
-
-    <div>
-      <h5>instagram icon</h5>
-      <a href="https://www.iconfinder.com/"><img src="img/instagram-icon.svg" width="200" height="200" alt="map"></a>
-    </div>
-
-    <div>
-      <h5>youtube icon</h5>
-      <a href="https://www.iconfinder.com/"> <img src="img/youtube-icon.svg" width="200" height="200" alt="map"></a>
-    </div>
-
-    <div>
-      <h5>facebook icon</h5>
-      <a href="https://www.iconfinder.com/"><img src="img/facebook-icon.svg" width="200" height="200" alt="map"></a>
-    </div>
-
-
-  </section>
+  <!-- ****** JavaScript ****** -->
+  <script src="js/menu.js"></script>
+  <!-- ****** JavaScript ENDS ****** -->
 
 </body>
+  
+<!-- **** BODY SECTION ENDS **** -->
 
+  
 </html>

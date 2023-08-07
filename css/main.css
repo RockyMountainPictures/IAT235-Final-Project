@@ -5,6 +5,18 @@
   box-sizing: border-box;
 }
 
+/* smooth scroll on non-touch devices */
+@media (hover: hover) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+/* add space above id when linking to one */
+[id] {
+  scroll-margin-top: min(10vh, 2.5rem);
+}
+
 /* --- FONT VARIABLES --- */
 :root {
   --regular: 400;
@@ -21,7 +33,7 @@
   --color-light-blue: #5F658B;
 }
 
-/* --- Headings CSS --- */
+/* --- TEXT DEFAULT VALUES --- */
 body {
   font-family: Poppins, sans-serif;
   font-size: 1rem;
@@ -56,7 +68,6 @@ h3 {
   line-height: 110%;
   padding: 0;
   margin: 0;
-  /* text-shadow: 1px 2px 2px #868391; */
 }
 
 h4 {
@@ -101,23 +112,21 @@ a {
   margin: 0;
 }
 
-a:not(.logo):not(.activity-icon):not(.cta):not(.logo-link):hover {
+/* hover animation */
+a:not(.exclude-hover):hover {
   color: var(--color-red);
   transition-duration: 0.2s;
-  filter: brightness(0) saturate(100%) invert(31%) sepia(65%) saturate(1903%) hue-rotate(332deg) brightness(86%) contrast(98%);
+  filter: brightness(0) saturate(100%) invert(31%) sepia(65%) saturate(1903%) hue-rotate(332deg) brightness(86%) contrast(98%) !important;
   transition-property: color;
 }
 
+/* --- TEXT DEFAULT VALUES END --- */
 
-#map.hamburger {
-  display: none;
-  filter: brightness(0) saturate(100%) invert(17%) sepia(47%) saturate(470%) hue-rotate(194deg) brightness(90%) contrast(90%);
-  line-height: 0;
-  z-index: 999;
-}
 
-/* --- Header CSS --- */
 
+/* ---- HEADER ---- */
+
+/* alignment */
 header {
   width: 100%;
   height: 8.75rem;
@@ -125,28 +134,6 @@ header {
   transition-duration: 0.5s;
   z-index: 2;
   position: relative;
-}
-
-.header-background-wrapper {
-  position: absolute;
-  width: 100%;
-  height: 8.75rem;
-  z-index: 1;
-}
-
-@media (hover: none) and (min-width: 993px) {
-  .header-background {
-    height: 8.75rem !important;
-  }
-}
-
-.header-background {
-  position: absolute;
-  width: 100%;
-  height: 0;
-  transition-property: height;
-  transition-duration: 0.5s;
-  background-color: var(--color-white);
 }
 
 .header-wrapper {
@@ -158,6 +145,7 @@ header {
   padding: 2.5rem;
 }
 
+/* content */
 .header-logo {
   display: flex;
   flex-flow: row nowrap;
@@ -177,10 +165,41 @@ header {
   margin-left: 0.375rem;
 }
 
+/* -- Background Dropdown -- */
+.header-background-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 8.75rem;
+  z-index: 1;
+}
+
+.header-background {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  transition-property: height;
+  transition-duration: 0.5s;
+  background-color: var(--color-white);
+}
+
+@media (hover: none) and (min-width: 993px) {
+  .header-background {
+    height: 8.75rem !important;
+  }
+}
+
+/* -- Mobile Header -- */
 .hamburger {
   display: none;
   filter: brightness(0) saturate(100%) invert(17%) sepia(47%) saturate(470%) hue-rotate(194deg) brightness(90%) contrast(90%);
   line-height: 0;
+}
+
+#map.hamburger {
+  display: none;
+  filter: brightness(0) saturate(100%) invert(17%) sepia(47%) saturate(470%) hue-rotate(194deg) brightness(90%) contrast(90%);
+  line-height: 0;
+  z-index: 999;
 }
 
 .hamburger img {
@@ -188,6 +207,7 @@ header {
   width: auto;
 }
 
+/* -- Background Dropdown -- */
 .map-header a {
   color: var(--color-white) !important;
   z-index: 10 !important;
@@ -198,12 +218,19 @@ header {
   filter: brightness(100);
 }
 
+#map-top-header {
+  position: absolute;
+}
 
-/* --- Body Content CSS --- */
+/* ---- HEADER ENDS ---- */
+
+
+/* ---- BODY ---- */
 
 .home-page {
   background-image: url("../img/FinalHome-Pg.svg");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 main {
@@ -216,24 +243,25 @@ main {
   width: max(65vw, 70rem);
 }
 
+/* ---- BODY ENDS ---- */
 
-/* --- Hero Section CSS --- */
 
+/* ---- HERO SECTION ---- */
+
+/* -- Alignmnet -- */
 #home {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   flex-flow: row wrap-reverse;
   margin-bottom: 8rem;
-  /* margin-left: min(10vw,-8rem); */
-  /*Doing margin-left here breaks the layout*/
-
 }
 
 .hero-content {
   margin-top: 8.75rem;
 }
 
+/* -- Text Content -- */
 .hero-content h1 {
   margin-bottom: 3rem;
 }
@@ -244,12 +272,23 @@ main {
   width: 32ch;
 }
 
+/* -- Snowglobe Hero Image -- */
+.hero-image {
+  margin-top: -8.75rem;
+  z-index: -1;
+  height: 50rem;
+  margin-left: -16%;
+}
+
+/* -- Buttons -- */
+/* alignmnet */
 .hero-buttons {
   display: flex;
   flex-flow: row wrap;
   gap: 2.5rem;
 }
 
+/* default values */
 .hero-buttons a {
   border-color: var(--color-navy);
   border-width: 0.25rem;
@@ -264,18 +303,6 @@ main {
   gap: 1.25rem;
 }
 
-.map-button {
-  border-style: none;
-  color: var(--color-white);
-  background-color: var(--color-red);
-}
-
-.effigy-button {
-  border-style: solid;
-  color: var(--color-navy);
-  background-color: var(--color-white);
-}
-
 .hero-buttons a:hover {
   text-decoration: underline;
   text-decoration-thickness: .1rem;
@@ -285,34 +312,78 @@ main {
   transition-duration: 0.4s;
 }
 
-.hero-buttons .map-button:hover {
+/* explore map button */
+.map-button {
+  border-style: none;
+  color: var(--color-white);
+  background-color: var(--color-red);
+}
+
+.map-button:hover {
   color: var(--color-red);
   background-color: var(--color-white);
 }
 
-.hero-buttons .map-button:hover img {
+.map-button:hover img {
   filter: brightness(0) saturate(100%) invert(31%) sepia(65%) saturate(1903%) hue-rotate(332deg) brightness(86%) contrast(98%);
 }
 
-.hero-buttons .effigy-button:hover {
+/* purchase effigy button */
+.effigy-button {
+  border-style: solid;
+  color: var(--color-navy);
+  background-color: var(--color-white);
+}
+
+.effigy-button:hover {
   color: var(--color-white);
   background-color: var(--color-navy);
 }
 
-.hero-image {
-  margin-top: -8.75rem;
-  z-index: -1;
-  height: 50rem;
-  margin-left: -16%;
+/* what is an effigy button */
+.effigy-question {
+  display: flex !important;
+  gap: 0.75rem !important;
+  flex-flow: row nowrap;
+  font-size: 1rem !important;
+  font-weight: var(--regular);
+  color: var(--color-light-blue);
+  justify-content: flex-start !important;
+  height: auto !important;
+  width: auto !important;
+  margin-top: 0.75rem;
+  padding-left: 0.75rem;
+  transition: 0.2s !important;
+  transition-property: color !important;
 }
 
+.effigy-question img {
+  width: 1rem !important;
+  height: 1rem !important;
+  filter: brightness(0) saturate(100%) invert(37%) sepia(10%) saturate(1545%) hue-rotate(195deg) brightness(100%) contrast(80%);
+}
 
-/* --- About Section CSS --- */
+.effigy-question:hover {
+  color: var(--color-navy) !important;
+  filter: brightness(0) saturate(100%) invert(17%) sepia(8%) saturate(2545%) hue-rotate(194deg) brightness(93%) contrast(88%) !important;
+}
 
+/* ---- HERO SECTION ENDS ---- */
+
+
+/* ---- ABOUT SECTION ---- */
+
+/* -- Default Values -- */
 .title {
   margin-bottom: 1.25rem;
 }
 
+.mobile-title {
+  display: none;
+  /* display different title on mobile */
+}
+
+/* -- About Us (first section) -- */
 .about-overview {
   display: flex;
   justify-content: space-between;
@@ -351,11 +422,9 @@ main {
   margin-top: 3.75rem;
 }
 
-.mobile-title {
-  display: none;
-}
-
-.about-vision {
+/* -- Our Vision & About Bonhomme (second & third section) -- */
+/* alignment */
+.about-open-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -363,6 +432,7 @@ main {
   margin-bottom: 5rem;
 }
 
+/* content */
 .about-image {
   border-radius: 1.25rem;
   object-fit: cover;
@@ -378,20 +448,14 @@ main {
   flex: 0 0 auto;
 }
 
-.about-bonhomme {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-flow: row nowrap;
-  margin-bottom: 5rem;
-}
-
-.about-bonhomme .about-open-text {
+/* for "about bonhomme" section */
+.about-reversed-content .about-open-text {
   padding-left: 0;
   padding-right: 2.5rem;
 }
 
-
+/* -- Visitor's Guide (fourth section) -- */
+/* alignment */
 .visitors-guide {
   display: flex;
   flex-flow: row wrap;
@@ -408,6 +472,7 @@ main {
   width: calc((100% - 2.5rem) / 3);
 }
 
+/* content */
 .card h4 {
   padding: 1.25rem 2.5rem;
   color: var(--color-white);
@@ -430,23 +495,17 @@ main {
   padding-bottom: 2.5rem;
 }
 
+/* ---- ABOUT SECTION ENDS ---- */
 
-/* --- Footer CSS --- */
 
+/* ---- FOOTER ---- */
+
+/* -- Section Alignment -- */
 footer {
   display: flex;
   justify-content: center;
   background-color: var(--color-navy);
   padding: 2.5rem 0;
-}
-
-footer h3 {
-  line-height: 100%;
-}
-
-footer a {
-  color: var(--color-white);
-  font-weight: var(--regular);
 }
 
 footer .wrapper {
@@ -455,6 +514,18 @@ footer .wrapper {
   justify-content: space-between;
 }
 
+/* -- Content -- */
+/* default values */
+footer a {
+  color: var(--color-white);
+  font-weight: var(--regular);
+}
+
+footer h3 {
+  line-height: 100%;
+}
+
+/* footer website links */
 .footer-links {
   display: flex;
   flex-flow: column nowrap;
@@ -470,6 +541,7 @@ footer .wrapper {
   align-items: center;
 }
 
+/* social icons and links */
 .social-icons {
   display: flex;
   flex-flow: row nowrap;
@@ -480,48 +552,44 @@ footer .wrapper {
   padding: 0 0.625rem;
 }
 
-/* --- HOME PAGE MEDIA QUERIES --- */
+/* ---- FOOTER ENDS ---- */
 
-/* Extra small devices (phones, less than 600px) */
+
+/* ---- HOME PAGE MEDIA QUERIES ---- */
+
+/* ---- Extra small devices (phones, less than 600px) ---- */
 @media only screen and (max-width: 600px) {
 
-  /* --- Body Content CSS --- */
-  .home-page {
-    background-image: url("../img/mobile-bg.svg");
-    background-size: cover;
-  }
-
+  /* -- Body Content -- */
   .wrapper {
     padding-left: 2.5vw !important;
     padding-right: 2.5vw !important;
   }
 
-  /* --- Header Section CSS --- */
+  /* -- Header Section -- */
   .header-logo h3 {
     display: none;
   }
 
-
-  /* --- Hero Section CSS --- */
-  .hero-image {
-    height: min(30rem, 125vw);
-    margin-top: max(-80vw, -14rem);
-    margin-left: 0;
-  }
-
+  /* -- Hero Section -- */
+  /* alignment */
   #home {
     justify-content: center;
   }
 
+  .hero-content {
+    margin-top: 2.5rem;
+  }
+
+  .effigy-cta-wrapper {
+    width: 100%;
+  }
+
+  /* content */
   .hero-content h1 {
     line-height: 100%;
     font-size: min(5rem, 14.5vw);
     margin-bottom: min(2.5rem, 10vw);
-  }
-
-  .hero-buttons {
-    justify-content: center;
-    gap: 1.25rem;
   }
 
   .hero-content h6 {
@@ -529,6 +597,17 @@ footer .wrapper {
     width: 100%;
     font-size: min(1.25rem, 5.2vw);
     margin-bottom: min(5rem, 20vw);
+  }
+
+  .hero-image {
+    height: min(30rem, 125vw);
+    margin-top: max(-80vw, -14rem);
+    margin-left: 0;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+    gap: 1.25rem;
   }
 
   .hero-buttons a {
@@ -543,12 +622,17 @@ footer .wrapper {
     height: auto;
   }
 
-  .hero-content {
-    margin-top: 2.5rem;
+  /* -- About Section -- */
+
+  /* about us (first section) */
+  .title-1 {
+    display: none;
   }
 
+  .title-2 {
+    display: initial;
+  }
 
-  /* --- About Section CSS --- */
   .about-details {
     width: 100%;
     padding: min(2.5rem, 10vw);
@@ -559,14 +643,6 @@ footer .wrapper {
     gap: 2.5rem;
   }
 
-  .title-2 {
-    display: initial;
-  }
-
-  .title-1 {
-    display: none;
-  }
-
   .about-overview .about-summary {
     display: flex;
     flex-flow: column nowrap;
@@ -575,33 +651,40 @@ footer .wrapper {
     gap: 1.25rem;
     padding: min(2rem, 8vw) min(2.5rem, 10vw) min(2.5rem, 10vw) min(2.5rem, 10vw);
   }
-
-  /* --- Footer CSS --- */
-
 }
 
-/* Small devices (portrait tablets and large phones, less than 768px) */
+/* ---- Extra small devices (phones, less than 600px) ENDS ---- */
+
+
+/* ---- Small devices (portrait tablets, less than 768px) ---- */
 @media only screen and (max-width: 768px) {
 
-  /* --- Body Content CSS --- */
+  /* -- Body Content -- */
   * {
     font-size: 14px;
   }
 
+  .home-page {
+    background-image: url("../img/mobile-bg.svg");
+    background-size: cover;
+  }
 
-  /* --- About Section CSS --- */
+  /* -- About Section -- */
+  /* about us (first section) */
   .about-overview .about-summary {
     width: 95%;
     padding: min(2rem, 8vw) min(2.5rem, 10vw) min(2.5rem, 10vw) min(2.5rem, 10vw);
   }
 
-  .about-vision {
+  /* our vision and meet bonhomme (second and third sections) */
+  .about-open-section {
     flex-flow: column wrap;
     gap: min(2.5rem, 10vw);
   }
 
   .about-image {
     width: 100%;
+    height: min(30rem, 75vh);
     align-self: flex-start;
   }
 
@@ -614,33 +697,33 @@ footer .wrapper {
     margin-bottom: min(0.75rem, 5vw);
   }
 
-  .about-bonhomme {
-    flex-flow: column-reverse;
-    gap: min(2.5rem, 10vw);
+  .about-reversed-content {
+    flex-flow: column-reverse !important;
   }
 
-  .about-bonhomme .about-open-text {
+  .about-reversed-content .about-open-text {
     padding-right: 0;
   }
 
-  .about-bonhomme .about-image {
+  /* visitor's guide (fourth section) */
+  .card {
     width: 100%;
-    height: min(30rem, 75vh);
-    align-self: flex-start;
+    height: min(40rem, 150vw);
   }
 
-
-  /* --- About Section CSS --- */
+  /* -- Footer -- */
+  /* section alignmnet */
   footer {
     padding: 5rem 0;
   }
 
-  .footer-logo {
-    margin-bottom: 5rem;
-  }
-
   footer .wrapper {
     flex-flow: column;
+  }
+
+  /* content */
+  .footer-logo {
+    margin-bottom: 5rem;
   }
 
   :nth-child(1 of .footer-links) {
@@ -655,16 +738,26 @@ footer .wrapper {
   .social-icons a {
     padding: 0.375rem;
   }
+}
 
-  .card {
-    width: 100%;
-    height: min(40rem, 150vw);
+/* ---- Small devices (portrait tablets, less than 768px) ENDS ---- */
+
+@media only screen and (max-width: 768px) and (orientation: landscape) and (hover: none) {
+  #map-top-header .header-logo h3 {
+    display: none;
   }
 }
 
+/* ---- ONLY small devices (768px to 601px) ---- */
 @media only screen and (max-width: 768px) and (min-width: 601px) {
 
-  /* --- Hero Section CSS --- */
+  /* -- Hero Section -- */
+  /* alignment */
+  .hero-content {
+    margin-top: -5.5rem;
+  }
+
+  /* content */
   .hero-content h1 {
     line-height: 9vw;
     font-size: 10vw;
@@ -675,10 +768,6 @@ footer .wrapper {
     margin-left: 64%;
   }
 
-  .hero-content {
-    margin-top: -5.5rem;
-  }
-
   .hero-buttons {
     gap: 2.5rem;
   }
@@ -687,8 +776,7 @@ footer .wrapper {
     width: 17.7rem;
   }
 
-
-  /* --- About Section CSS --- */
+  /* -- About Section -- */
   .about-details {
     width: 100%;
     padding: 2.5rem;
@@ -698,10 +786,12 @@ footer .wrapper {
   }
 }
 
-/* Medium devices (landscape tablets, less than 992px) */
+/* ---- ONLY small devices (768px to 601px) ENDS ---- */
+
+/* ---- Medium devices (landscape tablets, less than 992px) ---- */
 @media only screen and (max-width: 992px) {
 
-  /* --- Header Section CSS --- */
+  /* -- Header -- */
   .hamburger {
     display: block;
   }
@@ -720,27 +810,35 @@ footer .wrapper {
     height: 1.25rem;
   }
 
-  /* --- About Section CSS --- */
+  /* -- About Section -- */
   .about-overview {
     flex-flow: column wrap;
     align-items: flex-start;
   }
+
+  /* -- Map Section -- */
+  .box {
+    max-width: 12vw;
+    margin-top: -28px;
+  }
 }
 
+/* ---- Medium devices (landscape tablets, less than 992px) ENDS ---- */
+
+/* ---- ONLY Medium devices (992px to 769px) ---- */
 @media only screen and (max-width: 992px) and (min-width: 769px) {
 
-  /* --- Hero Section CSS --- */
+  /* -- Hero Section -- */
+  .hero-content {
+    margin-top: 2.5rem;
+  }
+
   .hero-image {
     height: min(28rem, 45vw);
     margin-left: -20rem;
   }
 
-  /* --- Hero Section CSS --- */
-  .hero-content {
-    margin-top: 2.5rem;
-  }
-
-  /* --- About Section CSS --- */
+  /* -- About Section -- */
   .about-overview .about-summary {
     width: 100%;
   }
@@ -757,24 +855,25 @@ footer .wrapper {
     width: 60%;
   }
 
-  /* --- Footer CSS --- */
+  /* -- Footer -- */
   .social-icons a {
     padding: 0 0.375rem;
   }
 }
 
-/* Large devices (laptops/desktops, less than 1200px) */
+/* ---- ONLY Medium devices (992px to 769px) ENDS ---- */
+
+/* ---- Large devices (laptops/small desktops, less than 1200px) ---- */
 @media only screen and (max-width: 1200px) {
 
-  /* --- Body Content CSS --- */
+  /* -- Body Content -- */
   .wrapper {
     width: 100%;
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
 
-
-  /* --- Header Section CSS --- */
+  /* -- Header -- */
   .header-wrapper nav a {
     padding: 0 0.625rem;
   }
@@ -784,13 +883,23 @@ footer .wrapper {
   }
 }
 
+/* ---- Large devices (laptops/small desktops, less than 1200px) ENDS ---- */
+
+/* ---- ONLY Large devices (1200px to 993px) ---- */
 @media only screen and (max-width: 1200px) and (min-width: 993px) {
+
+  /* -- Hero Section -- */
   .hero-image {
     height: calc(67vw - 14rem);
   }
 }
 
+/* ---- ONLY Large devices (1200px to 993px) ENDS ---- */
+
+/* ---- Large devices AND Medium devices (1200px to 769px) ---- */
 @media only screen and (max-width: 1200px) and (min-width: 769px) {
+
+  /* -- About Section -- */
   .card {
     width: calc(50% - 1.25rem);
     height: auto;
@@ -811,37 +920,37 @@ footer .wrapper {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+/* ---- Large devices AND Medium devices (1200px to 769px) ENDS ---- */
 
-  .home-page {
-    background-size: cover;
-  }
-}
-
-/* 4K screens (more than 1200px) */
+/* ---- Extra large devices (1440p and 4K screens, more than 2000px) ---- */
 @media only screen and (min-width: 2000px) {
 
-  /* --- Body Content CSS --- */
-  * {
-    font-size: 18px;
-  }
-
+  /* -- Text Default Values -- */
   h1 {
     line-height: 100%;
   }
 
-  /* --- About Section CSS --- */
+  /* -- Body Content -- */
+  * {
+    font-size: 18px;
+  }
+
+  /* -- About Section -- */
   .about-details {
     flex-flow: column nowrap;
     width: 100%;
     margin-left: -53%;
     padding-left: 59%
   }
-
 }
 
+/* ---- Extra large devices (1440p and 4K screens, more than 2000px) ENDS ---- */
+/* ---- MEDIA QUERIES ENDS ---- */
 
-/* --- MAP SECTION --- */
+
+/* ---- MAP SECTION ---- */
+
+/* -- Section Alignment -- */
 .map {
   position: relative;
   display: inline-block;
@@ -851,67 +960,54 @@ footer .wrapper {
   height: auto;
 }
 
-@media screen and (max-width: 982px) {
-  .map {
-    position: relative;
-    display: inline-block;
-    /* margin-top: -12rem; */
-    z-index: -1;
-    max-width: 100%;
-    height: auto;
-  }
-
-  .box {
-    max-width: 12vw;
-    margin-top: -28px;
-  }
-
-  #map {
-    margin-top: -12rem;
-  }
-}
-
-#map-nav-bar nav a {
-  color: var(--color-white);
-  gap: 2rem;
-}
-
-#map-nav-bar .header-logo a {
-  color: var(--color-white);
-}
-
-#map-footer {
-  margin-top: -6.4px;
-}
-
-#map-nav-bar h3 {
-  color: var(--color-white)
-}
-
-#map-nav-bar a:hover {
-  color: var(--color-red)
-}
-
 #map {
   position: relative;
   display: flex;
   line-height: 0;
-  margin-top: -10.2rem;
 }
 
-/* start of map icon popup */
-#map a:not(.popup-close) {
+/* -- Body and Image Section -- */
+.map-body {
+  background-color: var(--color-navy) !important;
+  background-image: none;
+}
+
+picture {
+  position: relative;
+  display: contents;
+  width: 100%;
+}
+
+/* -- Activity Icons -- */
+/* animation */
+.activity-icon {
   -webkit-animation: mover 3s infinite alternate;
   animation: mover 1s infinite alternate;
   position: absolute;
   display: inline-block;
 }
 
-.map-body {
-  background-color: var(--color-navy) !important;
-  background-image: none;
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-15px);
+  }
 }
 
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+/* icon sizing */
 .box {
   max-width: 12vw;
 }
@@ -922,13 +1018,7 @@ footer .wrapper {
   min-width: 20vw;
 }
 
-picture {
-  position: relative;
-  display: block;
-  width: 100%;
-}
-
-/* Mobile Icon Positions */
+/* -- Mobile Icon Positioning -- */
 @media screen and (max-aspect-ratio:7/10) {
   .box {
     max-width: 40vw;
@@ -979,7 +1069,9 @@ picture {
   }
 }
 
-/* Tablet Icon Positions */
+/* -- Mobile Icon Positioning ENDS -- */
+
+/* -- Tablet Icon Positioning -- */
 @media screen and ((min-aspect-ratio:7/10) and (max-aspect-ratio:177/125)) {
   .box {
     max-width: 20vw;
@@ -1022,7 +1114,9 @@ picture {
   }
 }
 
-/* Desktop Icon Positions */
+/* -- Tablet Icon Positioning ENDS -- */
+
+/* -- Desktop Icon Positioning -- */
 @media screen and (min-aspect-ratio:177/125) {
   .ice-canoeing-icon {
     top: calc((28vw * (9/16)) - 140px + 10.2rem);
@@ -1055,75 +1149,47 @@ picture {
   }
 }
 
-/* Activity Icons */
+/* -- Desktop Icon Positioning ENDS -- */
+
+/* -- Activity Icon Hovering Effect -- */
 @media (hover: hover) {
-  .dog-sledding-icon img:hover {
+  .dog-sledding-icon:hover img {
     background-repeat: no-repeat;
     content: url("../img/map-icons/hover-dog-sledding-icon.png");
   }
 
-  .ice-canoeing-icon img:hover {
+  .ice-canoeing-icon:hover img {
     background-repeat: no-repeat;
     content: url("../img/map-icons/hover-ice-canoeing-icon.png");
   }
 
-  .parade-icon img:hover {
+  .parade-icon:hover img {
     background-repeat: no-repeat;
     content: url("../img/map-icons/hover-parade-icon.png");
   }
 
-  .canadian-food-icon img:hover {
+  .canadian-food-icon:hover img {
     background-repeat: no-repeat;
     content: url("../img/map-icons/hover-canadian-food-icon.png");
   }
 
-  .ice-palace-icon img:hover {
+  .ice-palace-icon:hover img {
     background-repeat: no-repeat;
     content: url("../img/map-icons/hover-ice-palace-icon.png");
   }
 
-  .concert-icon img:hover {
+  .concert-icon:hover img {
     background-repeat: no-repeat;
     content: url("../img/map-icons/hover-concert-icon.png");
   }
 }
 
-/* To preload the hover images before user actually hovers over an icon */
-#preloaded-images {
-  width: 0px;
-  height: 0px;
-  line-height: 0;
-  position: absolute;
-}
-
-#preloaded-images img {
-  width: 0px;
-  height: 0px;
-}
-
-/* Animated Icons */
-@-webkit-keyframes mover {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(-15px);
-  }
-}
-
-@keyframes mover {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(-15px);
-  }
-}
+/* -- Activity Icon Hovering Effect ENDS -- */
+/* ---- MAP SECTION ENDS ---- */
 
 
-/* --- ACTIVITY POPUP SECTION ---  */
+/* ---- ACTIVITY POPUP SECTION ---- */
+/* applies to .map-body */
 .open-popup {
   background-image: url(../img/finalpopup-bg.svg) !important;
   background-color: rgba(0, 0, 0, 0) !important;
@@ -1131,16 +1197,13 @@ picture {
   background-size: cover;
 }
 
-button {
-  padding: 0;
-}
-
+/* -- Section Alignment -- */
 #popup {
   position: relative;
   padding-bottom: max(35vh, 5rem);
   padding-left: 2.5rem;
   padding-right: 2.5rem;
-  padding-top: 5rem;
+  padding-top: 15%;
   display: none;
   justify-content: center;
 }
@@ -1152,6 +1215,8 @@ button {
   max-width: 1800px;
 }
 
+/* -- Content -- */
+/* feature image */
 .popup-image {
   max-width: 40rem;
   width: 33vw;
@@ -1161,6 +1226,7 @@ button {
   margin-right: min(-5rem, -5vw);
 }
 
+/* white box */
 .popup-content {
   position: relative;
   margin-top: 2.5rem;
@@ -1171,11 +1237,16 @@ button {
   padding-left: min(2.5rem + 1.25rem, 2.5vw);
   padding-right: min(15rem, 15vw);
   margin-right: max(-15rem, -12vw);
-
   display: flex;
   flex-flow: column;
 }
 
+/* activity title */
+.popup-title {
+  margin-bottom: min(2.5rem, 2.5vw);
+}
+
+/* close popup button */
 .popup-close {
   position: absolute;
   margin-right: max(-15rem + 2.5rem, -15vw + 1.25rem);
@@ -1192,16 +1263,23 @@ button {
   filter: brightness(0) saturate(100%) invert(16%) sepia(39%) saturate(555%) hue-rotate(194deg) brightness(99%) contrast(90%);
 }
 
+/* activity mascot */
 .popup-mascot {
   width: 20%;
   height: auto;
+  max-height: 23.5rem;
   object-fit: scale-down;
   align-self: flex-end;
   z-index: 1;
 }
 
-.popup-title {
-  margin-bottom: min(2.5rem, 2.5vw);
+/* mobile "read more" and "read less" buttons */
+button {
+  padding: 0;
+  color: var(--color-white) !important;
+  display: inline;
+  height: 1rem;
+  width: auto;
 }
 
 #read-more-button {
@@ -1226,10 +1304,19 @@ button {
   line-height: 0;
 }
 
-/* Extra small devices (phones, 600px and down) */
+/* ---- Activity Popup Media Queries ---- */
+
+/* -- Skinny viewports and phones (less than 600px and less than a 7:10 aspect ratio) -- */
 @media only screen and (max-aspect-ratio:7/10),
 (max-width: 600px) {
 
+  /* applies to .map-body */
+  .popup-open-state {
+    background-image: none;
+    position: relative !important;
+  }
+
+  /* -- Section Alignment -- */
   #popup {
     background-image: url("../img/mobile-popup-mascot-background.png");
     background-color: var(--color-navy);
@@ -1238,7 +1325,6 @@ button {
     background-position: bottom;
     height: auto;
     padding: 1.25rem !important;
-    ;
     padding-bottom: 5rem;
     padding-top: 7.5rem !important;
   }
@@ -1249,6 +1335,7 @@ button {
     flex-flow: column !important;
   }
 
+  /* -- Content -- */
   .popup-image {
     width: 100% !important;
     max-width: 100% !important;
@@ -1258,12 +1345,22 @@ button {
     margin-bottom: 2.5rem;
   }
 
+  .popup-content {
+    background-color: rgba(0, 0, 0, 0);
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2.5rem;
+    position: unset;
+  }
+
   .popup-title {
     color: var(--color-white);
   }
 
   .popup-text {
     color: var(--color-white);
+    max-width: 45ch;
   }
 
   .popup-close {
@@ -1280,32 +1377,24 @@ button {
     height: auto;
     order: 3 !important;
   }
-
-  .popup-content {
-    background-color: rgba(0, 0, 0, 0);
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 2.5rem;
-    position: unset;
-  }
-
-  .popup-open-state {
-    background-image: none;
-    position: relative !important;
-  }
 }
 
+/* -- Skinny viewports and phones (less than 600px and less than a 7:10 aspect ratio) ENDS -- */
+
+/* -- Medium and small devices (996px to 601px) -- */
 @media only screen and (max-width: 996px) and (min-width: 601px) {
+
+  /* -- Section Alignment -- */
   #popup {
     justify-content: flex-start;
-    padding-top: 2.5rem;
+    padding-top: 7.5rem;
   }
 
   .popup-wrapper {
     flex-flow: column-reverse;
   }
 
+  /* -- Content -- */
   .popup-content {
     max-width: 90%;
     padding-bottom: 7.5rem;
@@ -1328,15 +1417,26 @@ button {
   }
 }
 
+/* -- Medium and small devices (996px to 601px) ENDS -- */
 
+/* -- Large devices (less than 1200px) -- */
 @media only screen and (max-width: 1200px) {
   .popup-close {
     margin-top: 0;
   }
 }
 
+/* -- Large devices (less than 1200px) ENDS -- */
+/* ---- Activity Popup Media Queries ENDS ---- */
+/* ---- ACTIVITY POPUP SECTION ENDS ---- */
 
-/* --- MOBILE MENU --- */
+
+/* ---- MOBILE MENU ---- */
+
+/* -- Alignment -- */
+#mySidenav {
+  width: 0;
+}
 
 .sidenav {
   height: 100%;
@@ -1360,6 +1460,14 @@ button {
   margin-left: -100vw;
 }
 
+/* -- Content -- */
+.sidenav nav {
+  display: flex;
+  flex-flow: column;
+  gap: 2.5rem;
+  margin-top: -5rem;
+}
+
 .sidenav a {
   font-weight: var(--regular);
   font-size: 1.875rem;
@@ -1367,13 +1475,6 @@ button {
   transition: 0.3s;
   line-height: 200%;
   transition-property: color;
-}
-
-.sidenav nav {
-  display: flex;
-  flex-flow: column;
-  gap: 2.5rem;
-  margin-top: -5rem;
 }
 
 #mySidenav .logo-link {
@@ -1393,241 +1494,214 @@ button {
   height: 1.25rem;
 }
 
-#mySidenav {
-  width: 0;
+/* ---- MOBILE MENU ENDS ---- */
+
+
+/* ---- LATE-NIGHT CITATIONS PAGE CSS ---- */
+
+/* -- Section Alignment --  */
+.citation-link-wrapper {
+  margin: 2.5rem;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2.5rem;
+  margin-bottom: 5rem;
 }
 
+.citation-text-wrapper {
+  display: flex;
+  flex-flow: column;
+  gap: 0.75rem;
+}
 
-#map.sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
+.citation-page {
+  padding: 2.5rem;
+  width: auto !important;
+}
+
+/* -- Content -- */
+/* title */
+.citation-page h1 {
+  padding-bottom: 5rem;
+}
+
+/* card */
+.citation-link-wrapper img {
+  border-radius: 0.5rem;
+}
+
+.citation-page a {
+  display: flex;
+  flex-flow: column;
   background-color: var(--color-navy);
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-  text-align: left;
-}
-
-#map.sidenav h6 {
-  display: flex;
-  padding-left: 2rem;
+  border-radius: 0.75rem;
   color: var(--color-white);
+  padding: 1.25rem;
+  gap: 0.75rem;
+  width: fit-content;
+  transition: 0.2s;
+  justify-content: space-between;
 }
 
-#map.sidenav a {
-  font-weight: var(--medium);
-  padding-left: 1rem;
-  text-decoration: none;
-  font-size: 1.25rem;
-  color: var(--color-white);
-  display: flex;
-  padding-bottom: 1rem;
-  transition: 0.3s;
-}
-
-#map.sidenav li:hover {
-  list-style: none;
-  color: var(--color-red);
-  transition-duration: 0.2s;
-  filter: brightness(0) saturate(100%) invert(31%) sepia(65%) saturate(1903%) hue-rotate(332deg) brightness(86%) contrast(98%);
-  transition-property: color;
-}
-
-#map.sidenav .closebtn {
-  position: absolute;
-  top: 2rem;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-
-
-#map.menu-logo-text h3 {
+.citation-page p {
+  line-height: 145%;
+  letter-spacing: -0.02rem;
+  font-weight: var(--regular);
   padding: 0;
-  display: inline;
-  font-size: 1.875rem;
-  font-style: normal;
-  font-weight: 700;
+  margin: 0;
+  max-width: 45ch;
 }
 
-
-/* --- CITATIONS PAGE --- */
-.citation-body ul {
-  padding-left: 8.81rem;
-  list-style: none;
-  padding-right: 2rem;
-  line-height: 200%
-}
-
-.citation-body li {
-  padding-right: 2rem;
-  font-size: 1.25rem;
-  list-style: none;
-}
-
-.citation-body h4 {
-  color: var(--color-light-blue);
-  padding-left: 8rem;
-}
-
-.citation-body h5 {
-  padding-left: 5rem;
-}
-
-.citation-body img {
-  flex-shrink: 0;
+.citation-source {
   display: flex;
+  flex-flow: row nowrap;
+  gap: 0.75rem;
+  align-items: center;
+}
 
-  max-width: 90%;
+/* cards with images */
+.citation-image {
+  max-width: 20rem;
+  max-height: 20rem;
+  object-fit: contain;
+}
+
+.citation-page h4 {
+  max-width: 20rem;
+}
+
+/* card animation */
+.citation-page a:not(.exclude-citation-hover):hover {
+  background-color: var(--color-white);
+  color: var(--color-navy);
+  transform: scale(1.1);
+}
+
+/* ui icon animation */
+.citation-page a:not(.exclude-citation-hover):hover .citation-icon {
+  filter: brightness(0) saturate(100%) invert(22%) sepia(98%) saturate(1349%) hue-rotate(332deg) brightness(112%) contrast(96%);
+}
+
+/* some icons have a dark logo */
+.white-background {
+  background-color: var(--color-white);  
+}
+
+/* some section titles have a dark bg behind them */
+.white-text {
+  color: var(--color-white);
+}
+/* -- Content ENDS -- */
+
+/* -- Citation Header -- */
+/* item alignment */
+.citation-header nav a {
+  padding: 0 0.75rem;
+}
+
+.citation-header nav {
+  font-size: 0;
+}
+
+.citation-header nav a:last-child {
+  padding: 0 0.75rem;
+}
+
+/* mobile menu */
+.citation-mobile-header .sidenav-wrapper nav {
+  gap: 0;
+  margin-top: 2.5rem;
+}
+
+.citation-mobile-header .sidenav-wrapper {
   height: auto;
-  padding-right: 2rem;
-  padding-bottom: 2rem;
-  padding-left: 5rem;
 }
 
-
-#title h3 {
-  margin-left: 7.25rem;
-  color: var(--color-red);
-  padding: 0;
-  margin-top: 5.69rem;
+.citation-mobile-header {
+  width: fit-content !important;
+  height: max(100vh, 66.75rem);
 }
 
-.font-list li {
-  font-size: 1rem;
-  word-wrap: normal;
+.citation-mobile-header .sidenav-wrapper .logo-link {
+  margin-top: -5rem !important;
 }
 
-.font-list ul li {
-  margin-top: 10px;
-  margin-bottom: 20px;
+/* sticky header css */
+.sticky-header {
+  position: fixed;
+  background: var(--color-white);
+  transition: 0.5s;
+  height: auto;
 }
 
-.code-list li {
-  font-size: 1rem;
-  line-height: 200%;
-  overflow-wrap: break-word;
+.sticky-header .header-wrapper {
+  padding: 0.75rem 2.5rem;
 }
 
-.copy-writing-list li {
-  font-size: 1rem;
-  line-height: 220%;
-  overflow-wrap: break-word;
+.sticky-header .header-wrapper a {
+  width: auto;
+  height: 3.5rem;
 }
 
-.inspiration-list li {
-  font-size: 1rem;
-  line-height: 200%;
+.sticky-header .header-wrapper a img {
+  width: 3.5rem;
+  height: 3.5rem;
 }
 
-#images-home {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0rem;
+.sticky-header + main {
+  padding-top: 8.125rem;
+}
+/* -- Citation Header ENDS -- */
 
-  padding-left: 1.5rem;
-  /*padding-left: 15rem*/
+/* -- Citation Media Queries -- */
+/* Extra small devices */
+@media screen and (max-width: 600px) {
+  /* keep things inline with header */
+  main .citation-page {
+    padding-left: 2.5rem !important;
+    padding-right: 2.5rem !important;
+  }
+
+  /* not needed anymore with diff background */
+  .white-text {
+    color: var(--color-navy);
+  }
 }
 
-#images-home h5 {
-  padding-bottom: 2rem;
-  /* padding-right: 1rem; */
-  padding-left: 5rem;
+/* Medium devices */
+@media screen and (max-width: 992px) {
+  /* card spacing */
+  .citation-link-wrapper {
+    gap: 1.25rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* more cards beside each other */
+  .citation-page p {
+    max-width: 40ch;
+  }
 }
 
-.home-page-image {
-  padding-left: 4rem;
-  border: 0rem;
+/* Large Devices */
+@media screen and (max-width: 1200px) {
+  /* header */
+  .citation-header .hamburger {
+    display: block;
+  }
 
+  .citation-header nav {
+    display: none;
+  }
 }
 
-#images-popup {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0.5rem;
-  /*padding-left(2.5rem, 15rem, 18rem);*/
-  padding-left: 2.5rem;
-
+/* keep navigation list on one line */
+@media screen and (max-width: 1650px) {
+  .citation-header h3 {
+    display: none;
+  }
 }
+/* -- Citation Media Queries ENDS-- */
+/* ---- LATE-NIGHT CITATIONS PAGE CSS ENDS ---- */
 
-#images-popup h5 {
-  padding-bottom: 2rem;
-
-}
-
-#images-popup div {
-  padding-left: 2rem;
-}
-
-#images-map-content-title h5 {
-  text-align: right;
-  padding-bottom: 2rem;
-  padding-right: 8.56rem;
-}
-
-#images-map-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1px;
-  /*padding-left: 15rem;*/
-}
-
-#images-map-content h5,
-#images-map-content img {
-  padding-bottom: 2rem;
-  padding-left: 7rem;
-}
-
-#images-map-content h5 {
-  margin-top: 4rem;
-}
-
-#images-map-content img {
-  box-sizing: border-box;
-}
-
-#images-map-content div {
-  padding-left: 2rem;
-}
-
-#images-map-title h5 {
-  padding-bottom: 2rem;
-  text-align: right;
-  padding-right: 8.56rem;
-}
-
-#images-map {
-  padding-left: 15rem;
-  gap: 2rem;
-}
-
-
-#images-map h5 {
-  padding-bottom: 2rem;
-}
-
-#icons {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1px;
-  padding-left: 15rem;
-}
-
-#icons-title h4 {
-  color: var(--color-white);
-}
-
-#icons div {
-  padding: 2rem;
-  border: 0;
-}
-
-#icons h5 {
-  padding-bottom: 2rem;
-  color: var(--color-white);
-}
+/* ---- wow congrats you made it all the way down here :) ---- */

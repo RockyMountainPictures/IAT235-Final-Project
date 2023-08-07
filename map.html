@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--
-  section for header
-  Style: padding
-  -->
-<!--  Add a class called logo.
-  1) Style of logo: max-width:___
-  -->
-
+  
+<!-- **** HEAD SECTION **** -->
+  
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Carnaval de Québec - Map</title>
   <link href="css/main.css" rel="stylesheet">
 
+  <!-- preload hover images for responsive interaction -->
   <link rel="preload" as="image" href="img/map-icons/hover-dog-sledding-icon.png">
   <link rel="preload" as="image" href="img/map-icons/hover-ice-canoeing-icon.png">
   <link rel="preload" as="image" href="img/map-icons/hover-parade-icon.png">
@@ -22,36 +18,16 @@
   <link rel="preload" as="image" href="img/map-icons/hover-ice-palace-icon.png">
   <link rel="preload" as="image" href="img/map-icons/hover-concert-icon.png">
 </head>
-<!--
-  section for navigation bar
-  -->
+  
+<!-- **** HEAD SECTION ENDS **** -->
 
+  
+
+<!-- **** BODY SECTION **** -->
+  
 <body class="map-body">
 
-  <!-- MENU SIDE BAR-->
-  <!-- <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="img/Arrow.svg" alt="arrow facing left"
-        width="40" height="25"></a>
-    <ul>
-      <li><a href="index.html">home</a></li>
-      <li><a onclick="closeNav()">map</a></li>
-      <li><a href="index.html#about-us">about</a></li>
-      <li><a href="https://carnaval.qc.ca/en/tickets/" target="_blank">tickets<img
-            src="img/external-link-icon-white512x512.png" alt="External link opens in new tab" width="16" height="16"
-            class="external-link"></a></li>
-    </ul>
-    <div class="menu-bonhomme">
-      <img src="img/bonhomme838x1026.png" width="169" height="207"
-        alt="cartoon drawing of bonhomme, the snowman mascot smiling with a red voyageur toque and a colourful sash around the waist.">
-    </div>
-    <div class="menu-logo">
-      <a href="index.html" class="logo-link"><img src="img/Logo960x960.png" alt="Carnaval de Quebec logo for Nav bar"
-          width="74" height="70" class="logo">
-        <h3>Carnaval<br>De Québec</h3>
-      </a>
-    </div>
-  </div> -->
-
+  <!-- ****** Mobile Header ****** -->
   <div id="mySidenav" class="sidenav">
     <div class="sidenav-wrapper">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
@@ -65,24 +41,21 @@
             src="img/external-link-icon-white512x512.png" alt="External link. opens in new tab." width="16" height="16"
             class="external-link-icon"></a>
       </nav>
-      <a href="index.html" class="logo-link"><img src="img/logo.png" alt="Carnaval de Quebec logo for Nav bar"
+      <a href="index.html" class="logo-link exclude-hover"><img src="img/logo.png" alt="Carnaval de Quebec logo for Nav bar"
           width="74" height="70" class="logo"></a>
     </div>
   </div>
+   <!-- ****** Mobile Header ENDS ****** -->
 
-  <!-- MENU ENDS HERE-->
-
-  <!-- Navigation Bar (CSS & HTML DONE) -->
+  <!-- ****** Desktop Header ****** -->
   <header id="map-top-header">
     <div class="header-wrapper map-header">
-      <a href="index.html" class="header-logo logo"><img src="img/logo.png" alt="Carnaval de Quebec logo for Nav bar"
+      <a href="index.html" class="header-logo logo exclude-hover"><img src="img/logo.png" alt="Carnaval de Quebec logo for Nav bar"
           width="60" height="60">
         <h3>Carnaval de Québec</h3>
       </a>
-      <a class="hamburger" onclick="openNav()"><img src="img/hamburger-icon.svg" width="40" alt="hamburger icon"></a>
-
-
-
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()"> <a class="hamburger"><img
+            src="img/hamburger-icon.svg" width="40" alt="hamburger icon"></a></span>
       <nav>
         <a href="index.html">home</a>
         <a href="#">map</a>
@@ -93,41 +66,43 @@
       </nav>
     </div>
   </header>
+  <!-- ****** Desktop Header ENDS ****** -->
 
+  <!-- ****** Map Section ****** -->
   <div id="map">
-    <!-- 12/10 -->
+
+    <!-- Map Image -->
     <picture>
       <source class="map" media="(min-aspect-ratio:177/125)" srcset="img/maps/mapfinal-3840-2160.webp">
-      <!-- alt="cartoon aerial map drawing of Québec city's major landmarks and roads" -->
       <source class="map" media="(min-aspect-ratio:7/10)" srcset="img/maps/mapfinal-2160-2160.webp">
-      <!-- alt="cartoon drawing of a cul-de-sac where the Carnaval de Québec mascots live" -->
       <img class="map" src="img/maps/mapfinal-975-4220.webp"
         alt="a windy cartoon winter road with trees, snow piles, and old-fashioned lamp posts">
-      <!-- alt="cartoon road with snow all around" -->
     </picture>
 
 
-
-    <a href="#" class="ice-canoeing-icon activity-icon"><img src="img/map-icons/ice-canoeing-icon.png" width="300"
+    <!-- Map Activity Icons -->
+    <a href="#" class="ice-canoeing-icon activity-icon exclude-hover"><img src="img/map-icons/ice-canoeing-icon.png" width="300"
         data-box='1' class="box" alt="snow bunny rowing in a one-person kayak"></a>
 
-    <a href="#" class="dog-sledding-icon activity-icon"><img src="img/map-icons/dog-sledding-icon.png" width="300"
+    <a href="#" class="dog-sledding-icon activity-icon exclude-hover"><img src="img/map-icons/dog-sledding-icon.png" width="300"
         data-box='0' class="box" alt="three dogs sitting next to each other on a wooden sled"></a>
 
-    <a href="#" class="parade-icon activity-icon"><img src="img/map-icons/parade-icon.png" width="300" data-box='2'
+    <a href="#" class="parade-icon activity-icon exclude-hover"><img src="img/map-icons/parade-icon.png" width="300" data-box='2'
         class="box" id="parade" alt="bear, snowy owl, and deer parading down the street with music and balloons"></a>
 
-    <a href="#" class="canadian-food-icon activity-icon"><img src="img/map-icons/canadian-food-icon.png" width="300"
+    <a href="#" class="canadian-food-icon activity-icon exclude-hover"><img src="img/map-icons/canadian-food-icon.png" width="300"
         data-box='3' class="box" alt="poutine food truck with a polar bear as the server"></a>
 
-    <a href="#" class="ice-palace-icon activity-icon"><img src="img/map-icons/ice-palace-icon.png" width="300"
+    <a href="#" class="ice-palace-icon activity-icon exclude-hover"><img src="img/map-icons/ice-palace-icon.png" width="300"
         data-box='4' class="box" alt="bear ice sculpture"></a>
 
-    <a href="#" class="concert-icon activity-icon"><img src="img/map-icons/concert-icon.png" width="300" data-box='5'
+    <a href="#" class="concert-icon activity-icon exclude-hover"><img src="img/map-icons/concert-icon.png" width="300" data-box='5'
         class="box" id="stage" alt="random bear singing on concert stage"></a>
 
   </div>
+  <!-- ****** Map Section Ends ****** -->
 
+  <!-- ****** Popup Template ****** -->
   <div id="popup">
     <div class="popup-wrapper">
       <img class="popup-image" src="img/popup-images/DogSled4663x3107.webp" height="360" width="640"
@@ -146,11 +121,12 @@
       <img class="popup-mascot" src="img/New-Mascots/New-Canoe-Mascot.png" width="300" alt="template mascot image">
     </div>
   </div>
+  <!-- ****** Popup Template Ends ****** -->
 
-  <!-- Footer Section (HTML & CSS DONE) -->
+  <!-- ****** Footer ****** -->
   <footer>
     <div class="wrapper">
-      <a href="index.html" class="footer-logo logo"><img src="img/logo.png" alt="Carnaval de Quebec logo for Nav bar"
+      <a href="index.html" class="footer-logo logo exclude-hover"><img src="img/logo.png" alt="Carnaval de Quebec logo for Nav bar"
           width="100" height="100" class="logo">
         <h3>Carnaval<br>de Québec</h3>
       </a>
@@ -179,84 +155,15 @@
       </nav>
     </div>
   </footer>
+  <!-- ****** Footer Ends ****** -->
 
-
-  <script src="js/popup-test.js"></script>
+  <!-- ****** JavaScript ****** -->
+  <script src="js/popup.js"></script>
   <script src="js/menu.js"></script>
+  <!-- ****** JavaScript Ends ****** -->
+  
 </body>
 
+<!-- ****** BODY SECTION ENDS ****** -->
+  
 </html>
-
-<!--  OLD CODE  -->
-<!-- <footer>
-  <section class="footer-bar">
-
-    <div class=footer-logo>
-      <a href="index.html" class="logo-link"><img src="img/Logo960x960.png" alt="Carnaval de Quebec logo for Nav bar"
-          width="100px" height="100px" class="logo">
-        <h3>Carnaval<br>de Québec</h3>
-      </a>
-    </div>
-    <div class="footerCitation">
-      <ul>
-        <li><a href="#citation"><a href="citation.html">citation</a>
-        </li>
-        <li><a href="#design_process">design process</a></li>
-      </ul>
-    </div>
-    <div class="footerCitation2">
-      <ul>
-        <li><a href="#">home</a></li>
-        <li><a href="map.html">map</a></li>
-        <li><a href="#about-us">about</a></li>
-        <li><a href="https://carnaval.qc.ca/en/tickets/" target="_blank">tickets<img
-              src="img/external-link-icon-white512x512.png" alt="External link opens in new tab" width="16px"
-              height="16px" class="external-link"></a></li>
-      </ul>
-    </div>
-    <div class="NaviIcons">
-      <ul>
-        <a href="https://www.facebook.com/carnavaldequebec/">
-          <img src="img/facebook-icon.svg" alt="White logo icon of Facebook" height="30px" target="_blank"></a>
-        <li><a href=" https://www.instagram.com/carnavaldequebec/">
-            <img src="img/instagram-icon.svg" alt="White logo icon of Instagram" height="30px" target="_blank"></a>
-        </li>
-        <li><a href="https://twitter.com/CarnavalQc">
-            <img src="img/twitter-icon.svg" alt="White logo icon of Twitter" height="30px" target="_blank"></a></li>
-        <li><a href="https://www.youtube.com/user/carnavaldequebec">
-            <img src="img/youtube-icon.svg" alt="White logo icon of Youtube" height="30px" target="_blank"></a></li>
-      </ul>
-    </div>
-
-  </section>
-</footer> -->
-
-
-<!-- <div class="canoe-popup" id="canoe-popup">
-      <img class="popup-image" src="img/popup-images/Canoe1024x768.jpeg" height="360px" width="640px"
-        alt="ice canoe racing team launching their boat off of an floating piece of ice in the Saint Lawrence River.">
-      <a href="#"><img class="popup-close" src="img/close-icon-white.svg" alt="close popup" width="30px"
-          onclick="closePopup()"></a>
-      <h3>Ice Canoeing</h3>
-      <p>For 21 years, the ice canoe racer has embraced the thrilling experience of gliding across the frozen St.
-        Lawrence River with their team. The 5-10km course challenges their bodies and minds as they navigate through
-        floating ice, freezing water, and ice floes with unwavering determination. <br><br> The crowd's cheers act as a
-        powerful surge of adrenaline, propelling them forward towards the finish line. Crossing that final threshold
-        feels like a triumphant testament to their unwavering perseverance and outstanding teamwork. As spectators, let
-        us join together in cheering them on, wishing the best team a victorious win in this exhilarating competition.
-      </p>
-    </div> -->
-
-<!-- <a href="#" class="ice-canoeing-icon"><img src="img/map-icons/ice-canoeing-icon.png" width="300px"
-        onclick="openPopup()"></a>
-
-    <a href="#" class="top-ice-canoeing-icon"><img src="img/map-icons/hover-ice-canoeing-icon.png" width="300px"
-        onclick="openPopup()"></a> -->
-
-
-<!--
-    <map name="interactive-map">
-      <area alt="ice canoeing" href="#" coords="1460,350,1760,596" shape="rect"><img src="img/ice-canoeing-icon980x805.png" width="300px"></area>
-    </map>
-    <img src="img/map-dekstop1920x1080.jpg" width="1920px" height="1080px" usemap="#interactive-map" alt="cartoon aeriel map of Quebec city's major landmarks and roads">
-    -->

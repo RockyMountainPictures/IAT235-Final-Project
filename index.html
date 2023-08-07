@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-CA">
 
-<!-- Head (DONE) -->
+
+<!-- **** HEAD SECTION **** -->
 
 <head>
   <meta charset="utf-8">
@@ -11,33 +12,15 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
+<!-- **** HEAD SECTION ENDS **** -->
+
+
+
+<!-- **** BODY SECTION **** -->
+
 <body class="home-page">
-  <!-- MENU -->
-  <!-- <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="img/Arrow.svg" alt="arrow facing left"
-        width="40"></a>
-    <ul>
-      <li><a onclick="closeNav()">home</a></li>
-      <li><a href="map.html">map</a></li>
-      <li><a href="#about-us" onclick="closeNav()">about</a></li>
-      <li><a href="https://carnaval.qc.ca/en/tickets/" target="_blank">tickets<img
-            src="img/external-link-icon-white512x512.png" alt="External link opens in new tab" width="16" height="16"
-            class="external-link-icon"></a></li>
-    </ul>
 
-    <div class="menu-bonhomme">
-      <img src="img/bonhomme838x1026.png" width="169" height="207"
-        alt="cartoon drawing of bonhomme, the snowman mascot smiling with a red voyageur toque and a colourful sash around the waist.">
-    </div>
-    <div class="menu-logo">
-      <a href="index.html" class="logo-link"><img src="img/Logo960x960.png" alt="Carnaval de Quebec logo for Nav bar"
-          width="74" height="70" class="logo">
-        <h3>Carnaval<br>De Québec</h3>
-      </a>
-    </div>
-  </div> -->
-
-
+  <!-- ****** Mobile Header ****** -->
   <div id="mySidenav" class="sidenav">
     <div class="sidenav-wrapper">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
@@ -51,26 +34,21 @@
             src="img/external-link-icon-white512x512.png" alt="External link. opens in new tab." width="16" height="16"
             class="external-link-icon"></a>
       </nav>
-      <a href="index.html" class="logo-link"><img src="img/logo.png" alt="Carnaval de Quebec logo for Nav bar"
-          width="74" height="70" class="logo"></a>
+      <a href="index.html" class="logo-link exclude-hover"><img src="img/logo.png"
+          alt="Carnaval de Quebec logo for Nav bar" width="74" height="70" class="logo"></a>
     </div>
   </div>
+  <!-- ****** Mobile Header ENDS ****** -->
 
-
-
-  <!-- MENU ENDS HERE -->
-
-  <!-- Start Body Content -->
-
-  <!-- Navigation Bar (CSS & HTML DONE) -->
+  <!-- ****** Desktop Header ****** -->
   <div class="header-background-wrapper">
     <div class="header-background"></div>
   </div>
 
   <header id="top-header" onmouseover="activateHeaderBackground()" onmouseout="deactivateHeaderBackground()">
     <div class="header-wrapper">
-      <a href="index.html" class="header-logo logo"><img src="img/logo.png" alt="Carnaval de Quebec logo for Nav bar"
-          width="60" height="60">
+      <a href="index.html" class="header-logo logo exclude-hover"><img src="img/logo.png"
+          alt="Carnaval de Quebec logo for Nav bar" width="60" height="60">
         <h3>Carnaval de Québec</h3>
       </a>
       <span style="font-size:30px;cursor:pointer" onclick="openNav()"> <a class="hamburger"><img
@@ -86,10 +64,13 @@
       </nav>
     </div>
   </header>
+  <!-- ****** Desktop Header ENDS ****** -->
 
-  <!-- Hero Section (HTML & CSS DONE) -->
+  <!-- ****** MAIN CONTENT BEGINS ****** -->
   <main>
     <div class="wrapper">
+
+      <!-- ****** Hero Section ****** -->
       <section id="home">
         <div class="hero-content">
           <h1>Welcome to<br>the Carnaval!</h1>
@@ -97,24 +78,30 @@
             Carnival.
           </h6>
           <div class="hero-buttons">
-            <a href="map.html" class="map-button cta"><img src="img/map-icon.svg" height="28" alt="Map icon">
+            <a href="map.html" class="map-button cta exclude-hover"><img src="img/map-icon.svg" height="28"
+                alt="Map icon">
               Explore Map
             </a>
-            <a href="https://carnaval.qc.ca/en/tickets/" target="_blank" class="effigy-button cta">
-              Order your Effigy
-            </a>
+            <div class="effigy-cta-wrapper">
+              <a href="https://carnaval.qc.ca/en/tickets/" target="_blank" class="effigy-button cta exclude-hover">
+                Order your Effigy
+              </a>
+              <a href="#effigy-card" onclick="highlightEffigySection()" class="effigy-question exclude-hover"><img
+                  src="img/question-mark-icon.svg" height="16" alt="Question mark icon">What is an
+                effigy?</a>
+            </div>
           </div>
         </div>
         <img src="img/hero-image-globe.png" class="hero-image" height="860"
           alt="Drawn snow globe ornament with the interactive map and lights wrapped around it">
-
       </section>
+      <!-- ****** Hero Section ENDS ****** -->
 
 
-      <!-- About Section (HTML & CSS DONE) -->
+      <!-- ****** About Section ****** -->
       <section id="about-us">
 
-        <!-- About Us -->
+        <!-- Overview & Details -->
         <h3 class="title title-1">about us</h3>
         <div class="about-overview">
           <div id="about-summary-height" class="about-summary">
@@ -136,9 +123,10 @@
             </div>
           </div>
         </div>
+        <!-- Overview & Details ENDS -->
 
         <!-- Our Vision -->
-        <div class="about-vision">
+        <div class="about-open-section">
           <img class="about-image" src="img/About_Fire960x564.jpeg" width="640"
             alt="Fisheye view of carnaval attendees surrounding a campfire roasting marshmallows">
           <div class="about-open-text">
@@ -154,9 +142,10 @@
               play.</h6>
           </div>
         </div>
+        <!-- Our Vision ENDS -->
 
         <!-- About Bonhomme -->
-        <div class="about-bonhomme">
+        <div class="about-reversed-content about-open-section">
           <div class="about-open-text">
             <h3 class="title">meet bonhomme</h3>
             <h6>Bonhomme is the iconic snowman mascot representative of Carnaval de Québec who has become a symbol
@@ -169,10 +158,13 @@
           <img class="about-image" src="img/bonhomme-homepg-image.jpg" width="640"
             alt="an image of bonhomme, the snowman mascot, waving in his red voyageur toque and a colourful sash around the waist.">
         </div>
+        <!-- About Bonhomme ENDS -->
 
         <!-- Visitor's Guide -->
         <h3 class="title">visitor's guide</h3>
         <div class="visitors-guide">
+
+          <!-- Card 1: Mascots -->
           <div class="card">
             <h4>mascots</h4>
             <img src="img/final-collage-card.png" width="500"
@@ -182,7 +174,8 @@
               through our map!</h6>
           </div>
 
-          <div class="card">
+          <!-- Card 2: Effigy -->
+          <div class="card" id="effigy-card">
             <h4>effigies</h4>
             <img src="img/effigycard.png" width="500" alt="Two photocards featuring two different versions of the
                     effigies">
@@ -192,6 +185,7 @@
               celebrates the year's festivies in the form of an ornament-like pendant with Bonhomme. </h6>
           </div>
 
+          <!-- Card 3: Activities -->
           <div class="card">
             <h4>activities</h4>
             <img src="img/activities-card-img.png" width="500"
@@ -202,19 +196,23 @@
               fun and new experiences for you and your friends and family to enjoy for the nine days!</h6>
           </div>
         </div>
+        <!-- Visitor's Guide ENDS -->
 
       </section>
+      <!-- ****** About Section ENDS ****** -->
+
     </div>
   </main>
+  <!-- ****** MAIN CONTENT ENDS ****** -->
 
-
-  <!-- Footer Section (HTML & CSS DONE) -->
+  <!-- ****** Footer ****** -->
   <footer>
     <div class="wrapper">
-      <a href="index.html" class="footer-logo logo"><img src="img/logo.png" alt="Carnaval de Quebec logo for Nav bar"
-          width="100" height="100" class="logo">
+      <a href="index.html" class="footer-logo logo exclude-hover"><img src="img/logo.png"
+          alt="Carnaval de Quebec logo for Nav bar" width="100" height="100" class="logo">
         <h3>Carnaval<br>de Québec</h3>
       </a>
+
       <nav class="footer-links">
         <a href="citation.html">citation</a>
         <a href="https://www.figma.com/proto/ayLJo4eaUv1vS08Ot76Ba8/235-Final-Project-(Design)-(NEW)?page-id=578%3A607&type=design&node-id=914-323&viewport=-978%2C297%2C0.11&t=2IpiZtKxf6T2KcQN-1&scaling=contain&mode=design"
@@ -239,14 +237,19 @@
         <a href="https://www.youtube.com/user/carnavaldequebec" target="_blank">
           <img src="img/youtube-icon.svg" alt="White logo icon of Youtube" height="30"></a>
       </nav>
+
     </div>
   </footer>
+  <!-- ****** Footer ENDS ****** -->
 
-
-  <!-- End Body Content -->
+  <!-- ****** JavaScript ****** -->
   <script src="js/index.js"></script>
   <script src="js/menu.js"></script>
+  <!-- ****** JavaScript ENDS ****** -->
 
 </body>
+
+<!-- ****** BODY SECTION ENDS ****** -->
+
 
 </html>
